@@ -7,6 +7,9 @@
  * @package underscores
  */
 
+
+
+
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
@@ -179,6 +182,35 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+
+// todo:                          . . : : C U S T O M _ R E C O R D _ T Y P E S : : . .
+
+add_action('init', function (){
+    register_post_type('products', [
+        'labels' => [
+            'name' => 'Продукты',
+            'singular_name' => 'Продукт',
+            'add_new' => 'Добавить продукт',
+            'add_new_item' => 'Добавить продукт',
+            'edit_item' => 'Редактировать продукт',
+            'new_item' => 'Новый продукт',
+            'all_items' => 'Все продукты',
+            'search_items' => 'Искать продукты',
+            'not_found' =>  'Продуктов по заданным критериям не найдено.',
+            'not_found_in_trash' => 'В корзине нет продуктов.',
+            'menu_name' => 'Продукты'
+        ],
+        'public' => true,
+        'has_archive' => true,
+    ]);
+});
+
+// todo:                                                       . . : : S H O R T C O D E : : . .
+
+add_shortcode('test_short_code', function ($attrs){
+    return 'Love ur updates, '.$attrs['name'].'...';
+});
 
 // todo:                                                       . . : : F I L T E R S : : . .
 

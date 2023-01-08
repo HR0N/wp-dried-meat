@@ -2,46 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6dc0c9a2-ee50-40f9-91a9-8e1f06c3b37f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/.eslintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/.stylelintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/404.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/archive.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/comments.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/css/h-boobstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/css/home.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/css/settings.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/functions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/inc/custom-header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/inc/customizer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/inc/jetpack.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/inc/template-functions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/inc/template-tags.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/js/customizer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/js/navigation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/languages/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/languages/underscores.pot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/page.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/phpcs.xml.dist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/screenshot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/search.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/sidebar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/single.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/style-rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/template-parts/content-none.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/template-parts/content-page.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/template-parts/content-search.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/template-parts/content.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/page-template-home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/underscores/css/settings.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/underscores/css/settings.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/underscores/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/underscores/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/underscores/page.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/underscores/page.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +57,8 @@
       <updated>1673014742907</updated>
       <workItem from="1673014744618" duration="2985000" />
       <workItem from="1673094966427" duration="5286000" />
-      <workItem from="1673110845273" duration="2045000" />
+      <workItem from="1673110845273" duration="2082000" />
+      <workItem from="1673172332800" duration="4436000" />
     </task>
     <servers />
   </component>
