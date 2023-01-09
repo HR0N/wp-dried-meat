@@ -3,3 +3,17 @@ body, html, *{
     padding: 0;
     box-sizing: border-box;
 }
+
+body, html{
+    background-color: var(--black);
+}
+
+:root{
+    --header-link: rgba(255,255,255,0.8);
+    --about: rgba(255,255,255,0.7);
+    --black: #101112;
+    --black-v2: black;
+    --brown: rgba(192,154,100,1);
+
+    --container-lg-width: 90%;
+}

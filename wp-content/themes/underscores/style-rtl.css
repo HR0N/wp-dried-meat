@@ -653,9 +653,9 @@ textarea {
 }
 
 .main-navigation ul {
-	display: none;
+	/*display: none;*/
 	list-style: none;
-	margin: 0;
+	/*margin: 0;*/
 	padding-right: 0;
 }
 
@@ -710,7 +710,7 @@ textarea {
 	}
 
 	.main-navigation ul {
-		display: flex;
+		/*display: flex;*/
 	}
 }
 

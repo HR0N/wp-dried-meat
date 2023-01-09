@@ -17,6 +17,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
+    <!--    Google Fonts    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+    <!--    Font Awesome    -->
+    <script src="https://kit.fontawesome.com/ee97ebf0ee.js" crossorigin="anonymous"></script>
+
 	<?php wp_head(); ?>
 </head>
 
@@ -55,5 +63,7 @@
 				)
 			);
 			?>
+            <div class="show-menu-btn"><i class="fa-solid fa-bars"></i></div>
+            <div class="hide-menu-btn"><i class="fa-solid fa-xmark"></i></div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

@@ -142,12 +142,17 @@ add_action( 'widgets_init', 'underscores_widgets_init' );
  */
 function underscores_scripts() {
 	wp_enqueue_style( 'underscores-style', get_stylesheet_uri(), array(), _S_VERSION );
+    wp_enqueue_style( 'menu', get_template_directory_uri().'/css/menu.css');
     wp_enqueue_style( 'bootstrap', get_template_directory_uri().'/css/h-boobstrap.css');
     wp_enqueue_style( 'settings', get_template_directory_uri().'/css/settings.css');
+    wp_enqueue_style( 'main', get_template_directory_uri().'/css/main.css');
     wp_enqueue_style( 'home', get_template_directory_uri().'/css/home.css');
+    wp_enqueue_style( 'settings', get_template_directory_uri().'/css/settings.css');
 	wp_style_add_data( 'underscores-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'underscores-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+    wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery.js');
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -155,6 +160,11 @@ function underscores_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'underscores_scripts' );
 
+function init_classes(){
+    wp_enqueue_script( 'darth_vader', get_template_directory_uri() . '/js/Darth_Vader.js');
+    wp_enqueue_script( 'menu', get_template_directory_uri() . '/js/menu.js');
+}
+add_action("wp_footer", 'init_classes');
 /**
  * Implement the Custom Header feature.
  */
@@ -227,7 +237,7 @@ add_filter('nav_menu_link_attributes', function ($attrs, $item, $args, $depth){
     $attrs['class'] = 'nav-link';
 
     if($attrs['aria-current'] === 'page'){
-        $attrs['class'] .= ' text-danger';
+        $attrs['class'] .= '';
     }
     return $attrs;
 }, 10, 4);
