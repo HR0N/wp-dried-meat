@@ -1,0 +1,86 @@
+.prices{
+    margin-top: 80px;
+    color: var(--header-link);
+}
+.prices-info{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+    font-size: 32px;
+    text-align: center;
+}
+.prices-info .prices-title, .prices-info .prices-description{
+    width: 100%;
+}
+.prices-info .prices-title{
+    font-size: 1.4em;
+    font-weight: bold;
+    font-family: "Roboto Condensed", sans-serif;
+}
+.prices-info .prices-description{
+    color: var(--about);
+    font-size: .9em;
+    font-family: Roboto, sans-serif;
+}
+
+.prices-items{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 23px;
+    font-weight: bold;
+    color: rgba(255,255,255,1);;
+}
+.prices-items .prices-item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+.prices-items .prices-item:nth-child(1){
+    margin-top: 0;
+}
+.prices-items .prices-item .name{
+    max-width: 200px;
+}
+.prices-items .prices-item .price{
+    color: var(--brown);
+    font-size: 1.2em;
+}
+.prices-items .prices-item .option-1,.prices-items .prices-item .option-2{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: .9em;
+}
+.prices-items .prices-item .option-1 .option-1-title,.prices-items .prices-item .option-2 .option-2-title{
+    font-size: .8em;
+    line-height: 10px;
+    width: 100%;
+    color: var(--about);
+}
+.prices-items .prices-item .option-1{
+
+}
+.prices-items .prices-item .option-2{
+
+}
+.prices-items .prices-item .button{
+    margin: 10px 0;
+}
+
+@media screen and (max-width: 426px) {
+
+    .prices-items .prices-item .name, .prices-items .prices-item .price, .prices-items .prices-item .option-1,
+    .prices-items .prices-item .option-2, .prices-items .prices-item .button{
+        margin-top: 15px;
+        width: 100%;
+    }
+    .prices-items .prices-item .button button{
+        width: 100%;
+    }
+}

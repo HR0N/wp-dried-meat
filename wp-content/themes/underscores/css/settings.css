@@ -2,10 +2,12 @@ body, html, *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 body, html{
     background-color: var(--black);
+    overflow-x: hidden;
 }
 
 :root{
@@ -15,5 +17,23 @@ body, html{
     --black-v2: black;
     --brown: rgba(192,154,100,1);
 
-    --container-lg-width: 90%;
+    --container-lg-width: 1254px;
+    --container-md-width: 954px;
+    --container-sm-width: 740px;
 }
+
+.custom-button-1{
+    color: rgba(255,255,255,1);
+    height: 46px;
+    font-size: 16px;
+    text-align: center;
+    text-align-last: center;
+    font-weight: 400;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    line-height: 100%;
+    font-family: Roboto, sans-serif;
+    background-color: rgb(192,154,100);
+}
+.custom-button-1:hover{background-color: rgb(204, 166, 109);}

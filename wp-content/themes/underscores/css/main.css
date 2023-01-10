@@ -1,92 +1,25 @@
 .site-main{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .frame{
     width: var(--container-lg-width);
-
-    padding: 24px 16px;
+    padding: 24px 15px;
 }
-.call-request{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.frame .col-left{
-    display: flex;
-}
-.frame .col-left .info{margin-left: 20px;}
-.frame .col-left .logo img{width: 66px;}
-.frame .col-left .info-title{
-    color: rgba(255,255,255,1);
-    font-size: 2.4em;
-    text-align: left;
-    text-align-last: left;
-    font-weight: 400;
-    text-decoration: none;
-    line-height: 117%;
-    font-family: 'Roboto Condensed', sans-serif;
-}
-.frame .col-left .info-description{
-    color: rgba(232,188,125,1);
-    font-size: 1.05em;
-    text-align: left;
-    text-align-last: left;
-    font-weight: 400;
-    text-decoration: none;
-    line-height: 137%;
-    font-family: Roboto, sans-serif;
-}
-.col-right{
-    display: flex;
-    align-items: center;
-}
-.col-right .phone{
-    color: rgba(255,255,255,1);
-    font-size: 20px;
-    text-align: left;
-    text-align-last: left;
-    font-weight: 700;
-    text-decoration: none;
-    line-height: 126%;
-    margin-right: 20px;
-    font-family: 'Roboto Condensed', sans-serif;
-}
-.col-right .button button{
-    color: rgba(255,255,255,1);
-    height: 46px;
-    font-size: 16px;
-    text-align: center;
-    text-align-last: center;
-    font-weight: 400;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    line-height: 100%;
-    font-family: Roboto, sans-serif;
-    background-color: rgb(192,154,100);
-}
-.col-right .button button:hover{background-color: rgb(204, 166, 109);}
-
-@media screen and (max-width: 768px) {
-    .call-request{
-        margin-top: 30px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+@media screen and (max-width: 1025px) {
+    .frame{
+        width: var(--container-md-width);
     }
-    .col-right, .col-left{
-        flex-direction: column;
+}
+@media screen and (max-width: 769px) {
+    .frame{
+        width: var(--container-sm-width);
     }
-    .frame .col-left .logo{
-        display: flex;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-    .frame .col-left .info{margin: 0;}
-    .frame .col-right .phone{
-        margin: 30px 0;
-        font-size: 1.6em;
+}
+@media screen and (max-width: 426px) {
+    .frame{
+        width: var(--container-sm-width);
     }
 }

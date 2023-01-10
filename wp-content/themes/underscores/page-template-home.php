@@ -32,7 +32,57 @@ get_header();
             </div>
             <div class="col-right">
                 <div class="phone">+38 (050) 745-35-25</div>
-                <div class="button"><button>Замовити дзвінок</button></div>
+                <div class="button"><button class="custom-button-1">Замовити дзвінок</button></div>
+            </div>
+        </div>
+
+        <div class="frame frame-x gallery-grid">
+            <div class="grid-wrap">
+                <div class="grid-item grid-item-1"><img src="<?php echo get_template_directory_uri().'/media/images/IMG_3418.jpg'?>" alt="alt_img"></div>
+                <div class="grid-item grid-item-2"><img src="<?php echo get_template_directory_uri().'/media/images/IMG_3426.jpg'?>" alt="alt_img"></div>
+                <div class="grid-item grid-item-3"><img src="<?php echo get_template_directory_uri().'/media/images/IMG_3472.jpg'?>" alt="alt_img"></div>
+                <div class="grid-item grid-item-4"><img src="<?php echo get_template_directory_uri().'/media/images/IMG_3422.jpg'?>" alt="alt_img"></div>
+            </div>
+        </div>
+
+        <div class="frame frame-x prices">
+            <div class="prices-wrap">
+                <div class="prices-info">
+                    <div class="prices-title">Ціни</div>
+                    <div class="prices-description">Виберіть м'ясо на смак</div>
+                </div>
+                <div class="prices-items">
+                    <div class="prices-item">
+                        <div class="name">Назва</div>
+                        <div class="price">
+                            130₴
+                        </div>
+                        <div class="option-1">
+                            <div class="option-1-title">Вага</div>
+                            30гр
+                        </div>
+                        <div class="option-2">
+                            <div class="option-2-title">Кіл-ть в упаковці</div>
+                            15шт
+                        </div>
+                        <div class="button"><button class="custom-button-1">Залишити заявку</button></div>
+                    </div>
+                    <div class="prices-item">
+                        <div class="name">Назва</div>
+                        <div class="price">
+                            130₴
+                        </div>
+                        <div class="option-1">
+                            <div class="option-1-title">Вага</div>
+                            30гр
+                        </div>
+                        <div class="option-2">
+                            <div class="option-2-title">Кіл-ть в упаковці</div>
+                            15шт
+                        </div>
+                        <div class="button"><button class="custom-button-1">Залишити заявку</button></div>
+                    </div>
+                </div>
             </div>
         </div>
 
