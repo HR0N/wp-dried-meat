@@ -11,7 +11,7 @@ body, html{
 }
 
 :root{
-    --header-link: rgba(255,255,255,0.8);
+    --header-link: rgba(255,255,255,0.7);
     --about: rgba(255,255,255,0.7);
     --black: #101112;
     --black-v2: black;

@@ -18,6 +18,7 @@
     font-size: 1.4em;
     font-weight: bold;
     font-family: "Roboto Condensed", sans-serif;
+    color: rgba(255,255,255,1);
 }
 .prices-info .prices-description{
     color: var(--about);
@@ -31,7 +32,7 @@
     flex-wrap: wrap;
     font-size: 23px;
     font-weight: bold;
-    color: rgba(255,255,255,1);;
+    color: rgba(255,255,255,1);
 }
 .prices-items .prices-item{
     display: flex;

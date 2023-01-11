@@ -150,6 +150,8 @@ function underscores_scripts() {
     wp_enqueue_style( 'call-request', get_template_directory_uri().'/css/call-request.css');
     wp_enqueue_style( 'gallery-grid', get_template_directory_uri().'/css/gallery-grid.css');
     wp_enqueue_style( 'prices', get_template_directory_uri().'/css/prices.css');
+    wp_enqueue_style( 'extra-info', get_template_directory_uri().'/css/extra-info.css');
+    wp_enqueue_style( 'why_are_we', get_template_directory_uri().'/css/why_are_we.css');
     wp_enqueue_style( 'settings', get_template_directory_uri().'/css/settings.css');
 	wp_style_add_data( 'underscores-style', 'rtl', 'replace' );
 

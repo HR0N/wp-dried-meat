@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6dc0c9a2-ee50-40f9-91a9-8e1f06c3b37f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/css/call-request.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/css/gallery-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/css/prices.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/css/extra-info.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/css/why_are_we.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/underscores/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/underscores/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/underscores/css/prices.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/underscores/css/prices.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/underscores/css/settings.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/underscores/css/settings.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/underscores/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/underscores/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/underscores/page-template-home.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/underscores/page-template-home.php" afterDir="false" />
@@ -40,13 +39,13 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/wp-content/themes/underscores/css" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\HRON\OpenServer\domains\pc-dried-meat\wp-content\themes\underscores\css" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\HRON\OpenServer\domains\pc-dried-meat\wp-content\themes\underscores\css" />
       <recent name="C:\HRON\OpenServer\domains\pc-dried-meat\wp-content\themes\underscores\js" />
       <recent name="C:\HRON\OpenServer\domains\pc-dried-meat\wp-content\themes\underscores" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\HRON\OpenServer\domains\pc-dried-meat\wp-content\themes\underscores\css" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -67,7 +66,8 @@
       <workItem from="1673281853331" duration="3351000" />
       <workItem from="1673285472020" duration="487000" />
       <workItem from="1673348828760" duration="5937000" />
-      <workItem from="1673378774131" duration="4420000" />
+      <workItem from="1673378774131" duration="5464000" />
+      <workItem from="1673445314545" duration="7093000" />
     </task>
     <servers />
   </component>
