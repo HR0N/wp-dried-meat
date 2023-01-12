@@ -145,6 +145,61 @@ get_header();
             </div>
         </div>
 
+        <div class="frame gallery-owl">
+            <div class="owl-carousel owl-theme">
+                <div>
+                    <img class="mgs-p2" data-idx="1" src="<?php echo get_template_directory_uri().'/media/images/IMG_3418.jpg'?>" alt="alt_img">
+                    <img class="mgs-p2" data-idx="2" src="<?php echo get_template_directory_uri().'/media/images/IMG_3422.jpg'?>" alt="alt_img">
+                </div>
+                <div>
+                    <img class="mgs-p2" data-idx="3" src="<?php echo get_template_directory_uri().'/media/images/IMG_3418.jpg'?>" alt="alt_img">
+                    <img class="mgs-p2" data-idx="4" src="<?php echo get_template_directory_uri().'/media/images/IMG_3422.jpg'?>" alt="alt_img">
+                </div>
+                <div>
+                    <img class="mgs-p2" data-idx="5" src="<?php echo get_template_directory_uri().'/media/images/IMG_3418.jpg'?>" alt="alt_img">
+                    <img class="mgs-p2" data-idx="6" src="<?php echo get_template_directory_uri().'/media/images/IMG_3422.jpg'?>" alt="alt_img">
+                </div>
+                <div>
+                    <img class="mgs-p2" data-idx="7" src="<?php echo get_template_directory_uri().'/media/images/IMG_3418.jpg'?>" alt="alt_img">
+                    <img class="mgs-p2" data-idx="8" src="<?php echo get_template_directory_uri().'/media/images/IMG_3422.jpg'?>" alt="alt_img">
+                </div>
+                <div>
+                    <img class="mgs-p2" data-idx="9" src="<?php echo get_template_directory_uri().'/media/images/IMG_3418.jpg'?>" alt="alt_img">
+                    <img class="mgs-p2" data-idx="10" src="<?php echo get_template_directory_uri().'/media/images/IMG_3422.jpg'?>" alt="alt_img">
+                </div>
+                <div>
+                    <img class="mgs-p2" data-idx="11" src="<?php echo get_template_directory_uri().'/media/images/IMG_3418.jpg'?>" alt="alt_img">
+                    <img class="mgs-p2" data-idx="12" src="<?php echo get_template_directory_uri().'/media/images/IMG_3422.jpg'?>" alt="alt_img">
+                </div>
+                <div>
+                    <img class="mgs-p2" data-idx="13" src="<?php echo get_template_directory_uri().'/media/images/IMG_3418.jpg'?>" alt="alt_img">
+                    <img class="mgs-p2" data-idx="14" src="<?php echo get_template_directory_uri().'/media/images/IMG_3422.jpg'?>" alt="alt_img">
+                </div>
+                <div>
+                    <img class="mgs-p2" data-idx="15" src="<?php echo get_template_directory_uri().'/media/images/IMG_3418.jpg'?>" alt="alt_img">
+                    <img class="mgs-p2" data-idx="16" src="<?php echo get_template_directory_uri().'/media/images/IMG_3422.jpg'?>" alt="alt_img">
+                </div>
+                <div>
+                    <img class="mgs-p2" data-idx="17" src="<?php echo get_template_directory_uri().'/media/images/IMG_3418.jpg'?>" alt="alt_img">
+                    <img class="mgs-p2" data-idx="18" src="<?php echo get_template_directory_uri().'/media/images/IMG_3472.jpg'?>" alt="alt_img">
+                </div>
+            </div>
+        </div>
+
+        <div class="frame gallery-show">
+            <div class="photo-count">1 / 4</div>
+            <div class="close"><i class="fa-solid fa-xmark"></i></div>
+            <div class="window-photo">
+<!--                <div class="gallery-show-frame frame-1"><img src="" alt="alt_img"></div>-->
+                <div class="gallery-show-frame frame-2"><img class="no_close" src="" alt="alt_img"></div>
+<!--                <div class="gallery-show-frame frame-3"><img src="" alt="alt_img"></div>-->
+            </div>
+            <div class="buttons">
+                <div class="button prev"><i class="fa-solid fa-chevron-left"></i></div>
+                <div class="button next"><i class="fa-solid fa-chevron-right"></i></div>
+            </div>
+        </div>
+
     </main><!-- #main -->
 
 <?php
