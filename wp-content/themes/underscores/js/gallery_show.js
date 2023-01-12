@@ -51,8 +51,12 @@
                 if(this.cur_idx > this.mgs_p2.length){this.cur_idx = this.mgs_p2.length;}
             }
             set_new_src(){
-                let src = this.mgs_p2.parent().find(`img[data-idx="${this.cur_idx}"]`).attr('src');
-                this.main_img.attr('src', src);
+                this.main_img.fadeOut(5);
+                setTimeout(() => {
+                    let src = this.mgs_p2.parent().find(`img[data-idx="${this.cur_idx}"]`).attr('src');
+                    this.main_img.attr('src', src);
+                    this.main_img.fadeIn(400);
+                    }, 5)
             }
             set_new_photo_count(){
                 let count = this.cur_idx;
@@ -62,16 +66,20 @@
                 this.photo_count.html(str);
             }
             fade_left_frame(){
-                this.cur_idx -=1;
-                this.check_idx();
-                this.set_new_src();
-                this.set_new_photo_count();
+                if(this.cur_idx > 1){
+                    this.cur_idx -=1;
+                    this.check_idx();
+                    this.set_new_src();
+                    this.set_new_photo_count();
+                }
             }
             fade_right_frame(){
-                this.cur_idx +=1;
-                this.check_idx();
-                this.set_new_src();
-                this.set_new_photo_count();
+                if(this.cur_idx < this.mgs_p2.length){
+                    this.cur_idx +=1;
+                    this.check_idx();
+                    this.set_new_src();
+                    this.set_new_photo_count();
+                }
             }
 
             events(){
