@@ -41,10 +41,12 @@
                     $(this.gallery).addClass('fadeIn');
                 }
                 this.set_new_photo_count();
+                // this.stopScroll();
             }
             hide_gallery(){
                 $(this.gallery).removeClass('fadeIn');
                 $(this.gallery).addClass('fadeOut');
+                // this.startScroll();
             }
             check_idx(){
                 if(this.cur_idx < 0){this.cur_idx = 0;}
@@ -55,7 +57,7 @@
                 setTimeout(() => {
                     let src = this.mgs_p2.parent().find(`img[data-idx="${this.cur_idx}"]`).attr('src');
                     this.main_img.attr('src', src);
-                    this.main_img.fadeIn(400);
+                    this.main_img.fadeIn(200);
                     }, 5)
             }
             set_new_photo_count(){

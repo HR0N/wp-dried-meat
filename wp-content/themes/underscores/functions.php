@@ -157,6 +157,8 @@ function underscores_scripts() {
     wp_enqueue_style( 'settings', get_template_directory_uri().'/css/settings.css');
     wp_enqueue_style( 'gallery-owl', get_template_directory_uri().'/css/gallery-owl.css');
     wp_enqueue_style( 'gallery-show', get_template_directory_uri().'/css/gallery-show.css');
+    wp_enqueue_style( 'faq', get_template_directory_uri().'/css/faq.css');
+    wp_enqueue_style( 'reviews', get_template_directory_uri().'/css/reviews.css');
     /*  Owl Carousel    */
     wp_enqueue_style( 'owl', get_template_directory_uri().'/libs/OwlCarousel2-2.3.4/assets/owl.carousel.css');
     wp_enqueue_style( 'owl-theme', get_template_directory_uri().'/libs/OwlCarousel2-2.3.4/assets/owl.theme.default.css');
@@ -177,6 +179,8 @@ function init_classes(){
     wp_enqueue_script( 'menu', get_template_directory_uri() . '/js/menu.js');
     wp_enqueue_script( 'gallery-show', get_template_directory_uri() . '/js/gallery_show.js');
     wp_enqueue_script( 'owl', get_template_directory_uri() . '/js/owl.js');
+    wp_enqueue_script( 'faq', get_template_directory_uri() . '/js/faq.js');
+    wp_enqueue_script( 'reviews', get_template_directory_uri() . '/js/reviews.js');
 }
 add_action("wp_footer", 'init_classes');
 /**

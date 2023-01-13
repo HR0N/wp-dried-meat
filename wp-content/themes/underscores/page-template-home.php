@@ -82,6 +82,36 @@ get_header();
                         </div>
                         <div class="button"><button class="custom-button-1">Залишити заявку</button></div>
                     </div>
+                    <div class="prices-item">
+                        <div class="name">Назва</div>
+                        <div class="price">
+                            130₴
+                        </div>
+                        <div class="option-1">
+                            <div class="option-1-title">Вага</div>
+                            30гр
+                        </div>
+                        <div class="option-2">
+                            <div class="option-2-title">Кіл-ть в упаковці</div>
+                            15шт
+                        </div>
+                        <div class="button"><button class="custom-button-1">Залишити заявку</button></div>
+                    </div>
+                    <div class="prices-item">
+                        <div class="name">Назва</div>
+                        <div class="price">
+                            130₴
+                        </div>
+                        <div class="option-1">
+                            <div class="option-1-title">Вага</div>
+                            30гр
+                        </div>
+                        <div class="option-2">
+                            <div class="option-2-title">Кіл-ть в упаковці</div>
+                            15шт
+                        </div>
+                        <div class="button"><button class="custom-button-1">Залишити заявку</button></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -146,7 +176,7 @@ get_header();
         </div>
 
         <div class="frame gallery-owl">
-            <div class="owl-carousel owl-theme">
+            <div class="owl-carousel owl-carousel-gallery-1 owl-theme">
                 <div>
                     <img class="mgs-p2" data-idx="1" src="<?php echo get_template_directory_uri().'/media/images/IMG_3418.jpg'?>" alt="alt_img">
                     <img class="mgs-p2" data-idx="2" src="<?php echo get_template_directory_uri().'/media/images/IMG_3422.jpg'?>" alt="alt_img">
@@ -187,7 +217,7 @@ get_header();
         </div>
 
         <div class="frame gallery-show">
-            <div class="photo-count">1 / 4</div>
+            <div class="photo-count">0 / 0</div>
             <div class="close"><i class="fa-solid fa-xmark"></i></div>
             <div class="window-photo">
 <!--                <div class="gallery-show-frame frame-1"><img src="" alt="alt_img"></div>-->
@@ -197,6 +227,114 @@ get_header();
             <div class="buttons">
                 <div class="button prev"><i class="fa-solid fa-chevron-left"></i></div>
                 <div class="button next"><i class="fa-solid fa-chevron-right"></i></div>
+            </div>
+        </div>
+
+        <div class="frame faq">
+            <div class="faq-wrap">
+                <div class="faq-title">Поширені запитання</div>
+                <div class="faq-questions">
+                    <div class="faq-question">
+                        <div class="row-1">
+                            <div class="faq-question__num">01</div>
+                            <div class="faq-question__title">Як довго триває редагування?</div>
+                            <div class="faq-question__arrow-icon"><i class="fa-solid fa-angle-up"></i></div>
+                        </div>
+                        <div class="row-2">
+                            <div class="faq-question__description">Все залежить від кількості знятого матеріалу та
+                                кількості фотографій, що пройшли ретуш.</div>
+                        </div>
+                    </div>
+                    <div class="faq-question">
+                        <div class="row-1">
+                            <div class="faq-question__num">02</div>
+                            <div class="faq-question__title">Якесь питання номер два?</div>
+                            <div class="faq-question__arrow-icon"><i class="fa-solid fa-angle-up"></i></div>
+                        </div>
+                        <div class="row-2">
+                            <div class="faq-question__description">Все залежить від кількості знятого матеріалу та
+                                кількості фотографій, що пройшли ретуш.</div>
+                        </div>
+                    </div>
+                    <div class="faq-question">
+                        <div class="row-1">
+                            <div class="faq-question__num">03</div>
+                            <div class="faq-question__title">Якесь питання номер два?</div>
+                            <div class="faq-question__arrow-icon"><i class="fa-solid fa-angle-up"></i></div>
+                        </div>
+                        <div class="row-2">
+                            <div class="faq-question__description">Все залежить від кількості знятого матеріалу та
+                                кількості фотографій, що пройшли ретуш.</div>
+                        </div>
+                    </div>
+                    <div class="faq-question">
+                        <div class="row-1">
+                            <div class="faq-question__num">04</div>
+                            <div class="faq-question__title">Якесь питання номер два?</div>
+                            <div class="faq-question__arrow-icon"><i class="fa-solid fa-angle-up"></i></div>
+                        </div>
+                        <div class="row-2">
+                            <div class="faq-question__description">Все залежить від кількості знятого матеріалу та
+                                кількості фотографій, що пройшли ретуш.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-card">
+                    <div class="logo"><img src="<?php echo get_template_directory_uri().'/media/images/IMG_3472.jpg'?>" alt="alt_img"></div>
+                    <div class="description">Запитати</div>
+                    <div class="title">В'ялині джерки</div>
+                    <div class="button"><button class="custom-button-1">Своє питання</button></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="frame reviews">
+            <div class="review-wrap">
+                <div class="owl-carousel owl-carousel-reviews owl-theme">
+                    <div><div class="item">
+                            <div class="photo"><img src="<?php echo get_template_directory_uri().'/media/reviews-photo/1.jpg'?>" alt="alt_img"></div>
+                            <div class="name">Маргарита</div>
+                            <div class="service">Корисні джерки</div>
+                            <div class="review">
+                                <div class="quote">„</div>
+                                <div class="text">
+                                    Дуже смачний снек, після першої пачки на "пробу"
+                                    відразу захотілося взяти ще. + відмінно підходить як "снек",
+                                    якщо ти на дієті - багато білка, а калорій - не особливо!
+                                </div>
+                                <div class="quote">“</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div><div class="item">
+                            <div class="photo"><img src="<?php echo get_template_directory_uri().'/media/reviews-photo/2.jpg'?>" alt="alt_img"></div>
+                            <div class="name">Елена</div>
+                            <div class="service">Смачні джерки</div>
+                            <div class="review">
+                                <div class="quote">„</div>
+                                <div class="text">
+                                    Дуже сподобалися, постійно купую.
+                                    Висока якість, ситість відчуваю після вживання 1 пачки. Багато білка та мінімум
+                                    вуглеводів.
+                                </div>
+                                <div class="quote">“</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div><div class="item">
+                            <div class="photo"><img src="<?php echo get_template_directory_uri().'/media/reviews-photo/3.jpg'?>" alt="alt_img"></div>
+                            <div class="name">Свiтлана</div>
+                            <div class="service">Смачні джерки</div>
+                            <div class="review">
+                                <div class="quote">„</div>
+                                <div class="text">
+                                    Смачне м'ясо, в дорогу якраз
+                                </div>
+                                <div class="quote">“</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

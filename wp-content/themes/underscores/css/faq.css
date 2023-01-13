@@ -1,0 +1,129 @@
+.faq{
+    margin-top: 150px;
+    padding-bottom: 100px;
+}
+.faq-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 22px;
+}
+.faq-title{
+    font-size: 1.4em;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    font-family: "Roboto Condensed", sans-serif;
+}
+.faq-questions{
+    margin-top: 50px;
+
+}
+.faq-question{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 760px;
+    max-height: 103px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 1s;
+}
+.faq-question .row-1, .faq-question .row-2{
+    display: flex;
+    width: 100%;
+    padding: 35px;
+}
+.faq-question .row-1{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+}
+.faq-question__num{
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--brown);
+}
+.faq-question__title{
+    font-weight: bold;
+    font-size: 1em;
+    margin: 0 30px;
+    color: white;
+    flex-grow: 1;
+    font-family: "Roboto Condensed", sans-serif;
+}
+.faq-question__arrow-icon{
+    align-self: start;
+    transition: all .7s;
+    transform: rotate(0);
+    color: var(--brown);
+}
+.faq-question__description{
+    font-size: .8em;
+    width: 100%;
+    font-family: Roboto, sans-serif;
+    color: var(--header-link);
+}
+
+.question-max-height{
+    max-height: 300px;
+}
+.question-max-height .faq-question__arrow-icon{
+    transform: rotate(-180deg);
+}
+
+.faq-card{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    align-items: center;
+    margin-left: 20px;
+    width: calc(100% - 780px);
+    font-size: 22px;
+}
+.faq-card .logo{
+    width: 180px;
+    height: 180px;
+    border: 4px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.faq-card .logo{
+    object-fit: cover;
+}
+.faq-card .description{
+    margin-top: 20px;
+    font-size: .8em;
+    color: var(--brown);
+    font-family: Roboto, sans-serif;
+}
+.faq-card .title{
+    margin-top: 10px;
+    color: white;
+    font-size: 1em;
+    font-family: "Roboto Condensed", sans-serif;
+}
+.faq-card .button{
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    .faq-wrap{
+        justify-content: center;
+    }
+    .faq-card{
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 769px) {
+    .faq-question .row-1, .faq-question .row-2{
+        padding: 35px 25px;
+    }
+    .faq-question__title{
+        align-self: start;
+        font-size: .9em;
+    }
+}
+@media screen and (max-width: 426px) {
+}

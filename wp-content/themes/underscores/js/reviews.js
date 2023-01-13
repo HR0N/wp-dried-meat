@@ -1,16 +1,12 @@
 (function($){
     $(document).ready(()=>{
-        class Owl extends Darth_Vader{
+        class Reviews extends Darth_Vader{
             constructor(elem) {
                 super($, elem);
-
-                this.carousel = this.find(".owl-carousel-gallery-1");
-                this.owl_items = this.find('.owl-items');
-                this.images = this.carousel.find('img');
+                this.carousel = this.find(".owl-carousel-reviews");
 
                 this.events();
             }
-
             settings(){
                 this.carousel.owlCarousel({
                     loop: true,
@@ -20,35 +16,22 @@
                     nav: true,
                     responsive:{
                         0:{
-                            items:2
+                            items:1
                         },
                         600:{
-                            items:3
+                            items:1
                         },
                         1000:{
-                            items:6
+                            items:1
                         }
                     }
                 });
             }
-
-            change_all_img_height(){
-                let images = this.carousel.find('img');
-                images.map((k, v)=>{
-                    $(v).parent().css({'height':this.images[0].width * 2});
-                });
-            }
-
             events(){
                 this.settings();
                 this.carousel.owlCarousel();
-                this.change_all_img_height();
-
-                this.carousel.on('changed.owl.carousel', () => {
-                    this.change_all_img_height();
-                });
             };
         }
-        new Owl('body');
+        new Reviews('body');
     });
 })(jQuery);

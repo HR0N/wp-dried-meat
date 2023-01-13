@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6dc0c9a2-ee50-40f9-91a9-8e1f06c3b37f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/css/faq.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/css/reviews.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/js/faq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/js/reviews.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/underscores/css/gallery-show.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/underscores/css/gallery-show.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/underscores/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/underscores/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/underscores/js/gallery_show.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/underscores/js/gallery_show.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/underscores/js/owl.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/underscores/js/owl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/underscores/page-template-home.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/underscores/page-template-home.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,15 +40,16 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/wp-content/themes/underscores/js" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\HRON\OpenServer\domains\pc-dried-meat\wp-content\themes\underscores\css" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\HRON\OpenServer\domains\pc-dried-meat\wp-content\themes\underscores\js" />
       <recent name="C:\HRON\OpenServer\domains\pc-dried-meat\wp-content\themes\underscores\css" />
       <recent name="C:\HRON\OpenServer\domains\pc-dried-meat\wp-content\themes\underscores" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\HRON\OpenServer\domains\pc-dried-meat\wp-content\themes\underscores\css" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -64,7 +73,9 @@
       <workItem from="1673378774131" duration="5464000" />
       <workItem from="1673445314545" duration="7451000" />
       <workItem from="1673522158569" duration="2641000" />
-      <workItem from="1673540967794" duration="17118000" />
+      <workItem from="1673540967794" duration="18289000" />
+      <workItem from="1673610711232" duration="9194000" />
+      <workItem from="1673640106983" duration="2005000" />
     </task>
     <servers />
   </component>
@@ -76,6 +87,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1673455407909" />
+    <state x="277" y="55" key="SettingsEditor" timestamp="1673625419366">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1673625419366" />
     <state x="463" y="144" width="611" height="536" key="find.popup" timestamp="1673555075415">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
