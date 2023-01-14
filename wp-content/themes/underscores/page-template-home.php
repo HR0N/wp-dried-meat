@@ -328,7 +328,7 @@ get_header();
                             <div class="review">
                                 <div class="quote">„</div>
                                 <div class="text">
-                                    Смачне м'ясо, в дорогу якраз
+                                    Смачне м'ясо, в дорогу якраз! Відразу захотілося взяти ще.
                                 </div>
                                 <div class="quote">“</div>
                             </div>

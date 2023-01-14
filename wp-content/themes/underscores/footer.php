@@ -11,7 +11,21 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
+	<footer id="colophon" class="site-footer footer">
+        <div class="footer-wrap">
+            <div class="footer-title">Залишились питання?</div>
+            <div class="footer-description">Задайте їх у наших групах у соціальних мережах</div>
+            <div class="footer-social">
+                <a href="#" class="social"><img src="<?php echo get_template_directory_uri().'/media/social/telegram.webp'?>" alt="telegram">Telegram</a>
+                <a href="#" class="social"><img src="<?php echo get_template_directory_uri().'/media/social/viber.webp'?>" alt="telegram">Viber</a>
+                <a href="#" class="social"><img src="<?php echo get_template_directory_uri().'/media/social/instagram.webp'?>" alt="telegram">Instagram</a>
+            </div>
+            <div class="footer-info">
+                <div class="phone"><div class="icon"><i class="fa-solid fa-phone"></i></div>+38 (123) 123-45-67</div>
+                <div class="address"><div class="icon"><i class="fa-solid fa-location-dot"></i></div>Украина, 321050, г. Киев, Бульв. Шевченка 11, дом, строение, номер кабинета</div>
+                <div class="mail"><div class="icon"><i class="fa-regular fa-envelope"></i></div>mai@gmail.com</div>
+            </div>
+        </div>
         <!--<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'underscores' ) ); ?>">
 				<?php

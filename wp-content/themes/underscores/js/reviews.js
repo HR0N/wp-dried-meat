@@ -12,7 +12,7 @@
                     loop: true,
                     dots: true,
                     margin: 0,
-                    autoplay:true,
+                    autoplay:false,
                     nav: true,
                     responsive:{
                         0:{

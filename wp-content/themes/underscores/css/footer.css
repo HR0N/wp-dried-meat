@@ -1,0 +1,102 @@
+.footer{
+    margin-top: 50px;
+    padding-bottom: 100px;
+
+}
+.footer-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 22px;
+    font-family: Roboto, sans-serif;
+}
+.footer-wrap .footer-title{
+    font-size: 1.4em;
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-family: "Roboto Condensed", sans-serif;
+}
+.footer-wrap .footer-description{
+    color: var(--header-link);
+    width: 100%;
+    text-align: center;
+}
+.footer-wrap .footer-social{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 210px);
+    justify-content: space-between;
+
+    gap: 20px;
+    width: 60%;
+    min-width: 310px;
+    max-width: 1200px;
+}
+.footer-wrap .footer-social .social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 210px;
+    padding: 12px 30px;
+    color: white;
+    outline: 2px solid rgba(204, 166, 109, 0);
+    transition: all .2s;
+    cursor: pointer;
+    text-decoration: none;
+}
+.footer-wrap .footer-social .social:hover{
+    outline: 2px solid var(--brown);
+}
+.footer-wrap .footer-social .social img{
+    height: 30px;
+    width: 30px;
+    margin-right: 20px;
+}
+
+.footer-wrap .footer-info{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 210px);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 60%;
+    min-width: 310px;
+    max-width: 1200px;
+    margin-top: 100px;
+}
+.footer-wrap .footer-info .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 10px auto;
+    background-color: black;
+    border-radius: 50%;
+    padding: 15px;
+    color: var(--brown);
+    font-size: 1.2em;
+}
+.footer-wrap .footer-info > div{
+    color: white;
+    font-weight: bold;
+    font-family: Roboto, sans-serif;
+    font-size: .7em;
+    text-align: center;
+    padding: 1px;
+}
+
+
+@media screen and (max-width: 769px) {
+    .footer-wrap .footer-social, .footer-wrap .footer-info{
+        justify-content: center;
+        width: 90%;
+    }
+}
+@media screen and (max-width: 426px) {
+    .footer-wrap .footer-social .social{
+        justify-content: start;
+    }
+}

@@ -159,6 +159,7 @@ function underscores_scripts() {
     wp_enqueue_style( 'gallery-show', get_template_directory_uri().'/css/gallery-show.css');
     wp_enqueue_style( 'faq', get_template_directory_uri().'/css/faq.css');
     wp_enqueue_style( 'reviews', get_template_directory_uri().'/css/reviews.css');
+    wp_enqueue_style( 'footer', get_template_directory_uri().'/css/footer.css');
     /*  Owl Carousel    */
     wp_enqueue_style( 'owl', get_template_directory_uri().'/libs/OwlCarousel2-2.3.4/assets/owl.carousel.css');
     wp_enqueue_style( 'owl-theme', get_template_directory_uri().'/libs/OwlCarousel2-2.3.4/assets/owl.theme.default.css');
