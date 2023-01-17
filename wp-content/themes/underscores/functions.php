@@ -214,26 +214,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 
 // todo:                          . . : : C U S T O M _ R E C O R D _ T Y P E S : : . .
-
-add_action('init', function (){
-    register_post_type('products', [
-        'labels' => [
-            'name' => 'Продукты',
-            'singular_name' => 'Продукт',
-            'add_new' => 'Добавить продукт',
-            'add_new_item' => 'Добавить продукт',
-            'edit_item' => 'Редактировать продукт',
-            'new_item' => 'Новый продукт',
-            'all_items' => 'Все продукты',
-            'search_items' => 'Искать продукты',
-            'not_found' =>  'Продуктов по заданным критериям не найдено.',
-            'not_found_in_trash' => 'В корзине нет продуктов.',
-            'menu_name' => 'Продукты'
-        ],
-        'public' => true,
-        'has_archive' => true,
-    ]);
-});
+include_once('inc/custom_record_types.php');
 
 // todo:                                                       . . : : S H O R T C O D E : : . .
 
@@ -260,3 +241,9 @@ add_filter('nav_menu_link_attributes', function ($attrs, $item, $args, $depth){
     }
     return $attrs;
 }, 10, 4);
+
+/*add_filter('get_image_tag_class',function($class){
+    $class .= ' img-fluid';
+    return $class;
+});*/
+

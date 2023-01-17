@@ -22,6 +22,16 @@
                 this.events();
             }
 
+            add_data(){
+                let images = this.find('.owl-carousel-gallery-1 img');
+                images.map((k, v)=>{
+                    $(v).addClass('mgs-p2').attr('data-idx', k+1);
+                });
+            }
+            reload_interface(){
+                this.mgs_p2 = this.find('.mgs-p2');   /*    mgs - my gallery show   */
+            }
+
             set_src(e){
                 let cur_target = $(e.target);
                 this.cur_idx = Number(cur_target.attr('data-idx'));
@@ -85,6 +95,8 @@
             }
 
             events(){
+                this.add_data();
+                this.reload_interface();
                 this.owl_carousel.on('click', this.show_gallery.bind(this));
                 this.close.on('click', this.hide_gallery.bind(this));
                 this.btn_prev.on('click', this.fade_left_frame.bind(this));

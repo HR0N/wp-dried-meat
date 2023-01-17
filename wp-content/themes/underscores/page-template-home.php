@@ -19,6 +19,21 @@
 
 get_header();
 ?>
+<?php
+    $gallery_posts_1 = get_posts(['post_type'=>'gallery_grid', 'order'=>'ASC', 'numberposts'=>4]);
+    $site_phone = get_posts(['post_type'=>'us_phone', 'numberposts'=>1])[0]->post_content;
+    $prices = get_posts(['post_type'=>'us_prices', 'order'=>'ASC', 'numberposts'=>20]);
+    $about_product = get_posts(['post_type'=>'us_about_product', 'numberposts'=>1])[0];
+    $why_are_we = get_posts(['post_type'=>'us_why_are_we', 'numberposts'=>3, 'order'=>'ASC']);
+    $gallery_owl = get_posts(['post_type'=>'us_gallery_owl', 'numberposts'=>40, 'order'=>'ASC']);
+
+
+    echo '<pre>';
+    echo var_dump($gallery_owl);
+    echo '</pre>';
+
+
+?>
 
     <main id="primary" class="site-main">
         <div class="back-drop-modal"></div>
@@ -31,17 +46,24 @@ get_header();
                 </div>
             </div>
             <div class="col-right">
-                <div class="phone">+38 (050) 745-35-25</div>
+                <div class="phone"><?php echo $site_phone;?></div>
                 <div class="button"><button class="custom-button-1">Замовити дзвінок</button></div>
             </div>
         </div>
 
+
+
         <div class="frame gallery-grid">
             <div class="grid-wrap">
-                <div class="grid-item grid-item-1"><img src="<?php echo get_template_directory_uri().'/media/images/IMG_3418.jpg'?>" alt="alt_img"></div>
-                <div class="grid-item grid-item-2"><img src="<?php echo get_template_directory_uri().'/media/images/IMG_3426.jpg'?>" alt="alt_img"></div>
-                <div class="grid-item grid-item-3"><img src="<?php echo get_template_directory_uri().'/media/images/IMG_3472.jpg'?>" alt="alt_img"></div>
-                <div class="grid-item grid-item-4"><img src="<?php echo get_template_directory_uri().'/media/images/IMG_3422.jpg'?>" alt="alt_img"></div>
+                <?php
+
+                foreach ($gallery_posts_1 as $g_post_1):?>
+                <div class="grid-item grid-item-1"><?= $g_post_1->post_content; ?></div>
+<!--                <div class="grid-item grid-item-1"><img src="--><?php //echo get_template_directory_uri().'/media/images/IMG_3418.jpg'?><!--" alt="alt_img"></div>-->
+<!--                <div class="grid-item grid-item-2"><img src="--><?php //echo get_template_directory_uri().'/media/images/IMG_3426.jpg'?><!--" alt="alt_img"></div>-->
+<!--                <div class="grid-item grid-item-3"><img src="--><?php //echo get_template_directory_uri().'/media/images/IMG_3472.jpg'?><!--" alt="alt_img"></div>-->
+<!--                <div class="grid-item grid-item-4"><img src="--><?php //echo get_template_directory_uri().'/media/images/IMG_3422.jpg'?><!--" alt="alt_img"></div>-->
+                <?php endforeach; ?>
             </div>
         </div>
 
@@ -52,66 +74,23 @@ get_header();
                     <div class="prices-description">Виберіть м'ясо на смак</div>
                 </div>
                 <div class="prices-items">
-                    <div class="prices-item">
-                        <div class="name">Назва</div>
-                        <div class="price">
-                            130₴
+                    <?php foreach ($prices as $price): ?>
+                        <div class="prices-item">
+                            <div class="name"><?php echo $price->post_title ?></div>
+                            <div class="price">
+                                <?php echo get_field('price', $price->ID) ?>
+                            </div>
+                            <div class="option-1">
+                                <div class="option-1-title">Вага</div>
+                                <?php echo get_field('weight', $price->ID) ?>
+                            </div>
+                            <div class="option-2">
+                                <div class="option-2-title">Кіл-ть</div>
+                                <?php echo get_field('count', $price->ID) ?>
+                            </div>
+                            <div class="button"><button class="custom-button-1">Залишити заявку</button></div>
                         </div>
-                        <div class="option-1">
-                            <div class="option-1-title">Вага</div>
-                            30гр
-                        </div>
-                        <div class="option-2">
-                            <div class="option-2-title">Кіл-ть в упаковці</div>
-                            15шт
-                        </div>
-                        <div class="button"><button class="custom-button-1">Залишити заявку</button></div>
-                    </div>
-                    <div class="prices-item">
-                        <div class="name">Назва</div>
-                        <div class="price">
-                            130₴
-                        </div>
-                        <div class="option-1">
-                            <div class="option-1-title">Вага</div>
-                            30гр
-                        </div>
-                        <div class="option-2">
-                            <div class="option-2-title">Кіл-ть в упаковці</div>
-                            15шт
-                        </div>
-                        <div class="button"><button class="custom-button-1">Залишити заявку</button></div>
-                    </div>
-                    <div class="prices-item">
-                        <div class="name">Назва</div>
-                        <div class="price">
-                            130₴
-                        </div>
-                        <div class="option-1">
-                            <div class="option-1-title">Вага</div>
-                            30гр
-                        </div>
-                        <div class="option-2">
-                            <div class="option-2-title">Кіл-ть в упаковці</div>
-                            15шт
-                        </div>
-                        <div class="button"><button class="custom-button-1">Залишити заявку</button></div>
-                    </div>
-                    <div class="prices-item">
-                        <div class="name">Назва</div>
-                        <div class="price">
-                            130₴
-                        </div>
-                        <div class="option-1">
-                            <div class="option-1-title">Вага</div>
-                            30гр
-                        </div>
-                        <div class="option-2">
-                            <div class="option-2-title">Кіл-ть в упаковці</div>
-                            15шт
-                        </div>
-                        <div class="button"><button class="custom-button-1">Залишити заявку</button></div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
@@ -119,17 +98,9 @@ get_header();
         <div class="frame extra-info">
             <div class="extra-info-wrap">
                 <div class="extra-info-col-1">
-                    <div class="title">Про продукт</div>
+                    <div class="title"><?php echo $about_product->post_title; ?></div>
                     <div class="text">
-                        <p>Джеронімо - крафтове виробництво сушено-копченого м’яса із шматочків свіжого курячого філе.
-                            Тоненькі шматочки курячого філе маринуються за рецептурою українських професійних технологів.</p>
-                        <p>Мариновані тоненькі шматочки м’яса висушуються і коптяться у професійному європейському
-                            обладнанні. Копчення відбувається натуральним способом на диму із фруктових дерев. Копчення
-                            надає унікального смаку, а також виконує головну функцію - натурального консерванту як сіль.
-                            Цей процес дає можливість зберігати продукт без використання холодильного обладнання, та
-                            доставляти продукт в звичайних температурних умовах, навіть поштою. Процес приготування від
-                            нарізки м’яса до готовності для споживання триває 24 години. Кожен день готується нова
-                            партія продукції і реалізується. Ви отримуєте лише свіжий продукт.</p>
+                        <?php echo $about_product->post_content; ?>
                     </div>
                 </div>
                 <div class="extra-info-col-2">
@@ -146,73 +117,26 @@ get_header();
             <div class="why_are_we-wrap">
                 <div class="title">Чому ми?</div>
                 <div class="why-items">
-                    <div class="why-item item-1">
+                <?php foreach ($why_are_we as $why): ?>
+                    <div class="why-item">
                         <div class="icon"><i class="fa-solid fa-check"></i></div>
                         <div class="group">
-                            <div class="item-title">Величезний досвід</div>
-                            <div class="item-description">Цей процес дає можливість зберігати продукт без використання
-                                холодильного обладнання, та доставляти продукт в звичайних температурних умовах,
-                                навіть поштою.</div>
+                            <div class="item-title"><?php  echo $why->post_title?></div>
+                            <div class="item-description"><?php  echo $why->post_content?></div>
                         </div>
                     </div>
-                    <div class="why-item item-2">
-                        <div class="icon"><i class="fa-solid fa-check"></i></div>
-                        <div class="group">
-                            <div class="item-title">Величезний</div>
-                            <div class="item-description">Процес приготування від нарізки м’яса до готовності для
-                                споживання триває 24 години.</div>
-                        </div>
-                    </div>
-                    <div class="why-item item-3">
-                        <div class="icon"><i class="fa-solid fa-check"></i></div>
-                        <div class="group">
-                            <div class="item-title">Досвід</div>
-                            <div class="item-description">Кожен день готується нова партія продукції і реалізується.
-                                Ви отримуєте лише свіжий продукт. </div>
-                        </div>
-                    </div>
+                <?php endforeach; ?>
                 </div>
             </div>
         </div>
 
         <div class="frame gallery-owl">
             <div class="owl-carousel owl-carousel-gallery-1 owl-theme">
-                <div>
-                    <img class="mgs-p2" data-idx="1" src="<?php echo get_template_directory_uri().'/media/images/IMG_3418.jpg'?>" alt="alt_img">
-                    <img class="mgs-p2" data-idx="2" src="<?php echo get_template_directory_uri().'/media/images/IMG_3422.jpg'?>" alt="alt_img">
-                </div>
-                <div>
-                    <img class="mgs-p2" data-idx="3" src="<?php echo get_template_directory_uri().'/media/images/IMG_3418.jpg'?>" alt="alt_img">
-                    <img class="mgs-p2" data-idx="4" src="<?php echo get_template_directory_uri().'/media/images/IMG_3422.jpg'?>" alt="alt_img">
-                </div>
-                <div>
-                    <img class="mgs-p2" data-idx="5" src="<?php echo get_template_directory_uri().'/media/images/IMG_3418.jpg'?>" alt="alt_img">
-                    <img class="mgs-p2" data-idx="6" src="<?php echo get_template_directory_uri().'/media/images/IMG_3422.jpg'?>" alt="alt_img">
-                </div>
-                <div>
-                    <img class="mgs-p2" data-idx="7" src="<?php echo get_template_directory_uri().'/media/images/IMG_3418.jpg'?>" alt="alt_img">
-                    <img class="mgs-p2" data-idx="8" src="<?php echo get_template_directory_uri().'/media/images/IMG_3422.jpg'?>" alt="alt_img">
-                </div>
-                <div>
-                    <img class="mgs-p2" data-idx="9" src="<?php echo get_template_directory_uri().'/media/images/IMG_3418.jpg'?>" alt="alt_img">
-                    <img class="mgs-p2" data-idx="10" src="<?php echo get_template_directory_uri().'/media/images/IMG_3422.jpg'?>" alt="alt_img">
-                </div>
-                <div>
-                    <img class="mgs-p2" data-idx="11" src="<?php echo get_template_directory_uri().'/media/images/IMG_3418.jpg'?>" alt="alt_img">
-                    <img class="mgs-p2" data-idx="12" src="<?php echo get_template_directory_uri().'/media/images/IMG_3422.jpg'?>" alt="alt_img">
-                </div>
-                <div>
-                    <img class="mgs-p2" data-idx="13" src="<?php echo get_template_directory_uri().'/media/images/IMG_3418.jpg'?>" alt="alt_img">
-                    <img class="mgs-p2" data-idx="14" src="<?php echo get_template_directory_uri().'/media/images/IMG_3422.jpg'?>" alt="alt_img">
-                </div>
-                <div>
-                    <img class="mgs-p2" data-idx="15" src="<?php echo get_template_directory_uri().'/media/images/IMG_3418.jpg'?>" alt="alt_img">
-                    <img class="mgs-p2" data-idx="16" src="<?php echo get_template_directory_uri().'/media/images/IMG_3422.jpg'?>" alt="alt_img">
-                </div>
-                <div>
-                    <img class="mgs-p2" data-idx="17" src="<?php echo get_template_directory_uri().'/media/images/IMG_3418.jpg'?>" alt="alt_img">
-                    <img class="mgs-p2" data-idx="18" src="<?php echo get_template_directory_uri().'/media/images/IMG_3472.jpg'?>" alt="alt_img">
-                </div>
+                <?php foreach ($gallery_owl as $owl): ?>
+                    <div>
+                        <?php echo $owl->post_content; ?>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
 

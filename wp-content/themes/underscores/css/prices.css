@@ -47,7 +47,7 @@
     margin-top: 0;
 }
 .prices-items .prices-item .name{
-    max-width: 200px;
+    max-width: 310px;
 }
 .prices-items .prices-item .price{
     color: var(--brown);
@@ -80,6 +80,9 @@
     .prices-items .prices-item .option-2, .prices-items .prices-item .button{
         margin-top: 15px;
         width: 100%;
+    }
+    .prices-items .prices-item .name{
+        max-width: 100%;
     }
     .prices-items .prices-item .button button{
         width: 100%;
