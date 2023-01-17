@@ -11,32 +11,57 @@
 
 ?>
 
+    <?php
+
+    $site_phone = get_posts(['post_type'=>'us_phone', 'numberposts'=>1])[0]->post_content;
+    $site_address = get_posts(['post_type'=>'us_address', 'numberposts'=>1])[0]->post_content;
+    $site_email = get_posts(['post_type'=>'us_email', 'numberposts'=>1])[0]->post_content;
+    $site_social = get_posts(['post_type'=>'us_social', 'numberposts'=>1])[0];
+
+    ?>
+
 	<footer id="colophon" class="site-footer footer">
         <div class="footer-wrap">
             <div class="footer-title">Залишились питання?</div>
             <div class="footer-description">Задайте їх у наших групах у соціальних мережах</div>
             <div class="footer-social">
-                <a href="#" class="social"><img src="<?php echo get_template_directory_uri().'/media/social/telegram.webp'?>" alt="telegram">Telegram</a>
-                <a href="#" class="social"><img src="<?php echo get_template_directory_uri().'/media/social/viber.webp'?>" alt="telegram">Viber</a>
-                <a href="#" class="social"><img src="<?php echo get_template_directory_uri().'/media/social/instagram.webp'?>" alt="telegram">Instagram</a>
+                <?php if (get_field('telegram', $site_social->ID) != '#'): ?>
+                    <a href="<?php echo get_field('telegram', $site_social->ID); ?>" class="social"><img src="<?php echo get_template_directory_uri().'/media/social/telegram.webp'?>" alt="telegram">Telegram</a>
+                <?php endif; ?>
+                <?php if (get_field('viber', $site_social->ID) != '#'): ?>
+                <a href="<?php echo get_field('viber', $site_social->ID); ?>" class="social"><img src="<?php echo get_template_directory_uri().'/media/social/viber.webp'?>" alt="viber">Viber</a>
+                <?php endif; ?>
+                <?php if (get_field('instagram', $site_social->ID) != '#'): ?>
+                <a href="<?php echo get_field('instagram', $site_social->ID); ?>" class="social"><img src="<?php echo get_template_directory_uri().'/media/social/instagram.webp'?>" alt="instagram">Instagram</a>
+                <?php endif; ?>
             </div>
             <div class="footer-info">
-                <div class="phone"><div class="icon"><i class="fa-solid fa-phone"></i></div>+38 (123) 123-45-67</div>
-                <div class="address"><div class="icon"><i class="fa-solid fa-location-dot"></i></div>Украина, 321050, г. Киев, Бульв. Шевченка 11, дом, строение, номер кабинета</div>
-                <div class="mail"><div class="icon"><i class="fa-regular fa-envelope"></i></div>mai@gmail.com</div>
+                <?php if ($site_phone != '#'): ?>
+                    <div class="phone"><div class="icon"><i class="fa-solid fa-phone"></i></div><?php echo $site_phone; ?></div>
+                <?php endif; ?>
+                <?php if ($site_address != '#'): ?>
+                    <div class="address"><div class="icon"><i class="fa-solid fa-location-dot"></i></div><?php echo $site_address; ?></div>
+                <?php endif; ?>
+                <?php if ($site_email != '#'): ?>
+                    <div class="mail"><div class="icon"><i class="fa-regular fa-envelope"></i></div><?php echo $site_email; ?></div>
+                <?php endif; ?>
+
+
+
             </div>
         </div>
         <!--<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'underscores' ) ); ?>">
+			<a href="<?php
+        echo esc_url( __( 'https://wordpress.org/', 'underscores' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'underscores' ), 'WordPress' );
+//				printf( esc_html__( 'Proudly powered by %s', 'underscores' ), 'WordPress' );
 				?>
 			</a>
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'underscores' ), 'underscores', '<a href="http://underscores.me/">Underscores.me</a>' );
+//				printf( esc_html__( 'Theme: %1$s by %2$s.', 'underscores' ), 'underscores', '<a href="http://underscores.me/">Underscores.me</a>' );
 				?>
 		</div> .site-info -->
 	</footer><!-- #colophon -->

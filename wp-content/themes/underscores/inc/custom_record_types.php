@@ -11,6 +11,26 @@ add_action('init', function (){
     ]);
 });
 add_action('init', function (){
+    register_post_type('us_address', [
+        'labels' => [
+            'name' => 'Адреса',
+            'singular_name' => 'us_address',
+        ],
+        'public' => false,
+        'show_ui' => true,
+    ]);
+});
+add_action('init', function (){
+    register_post_type('us_email', [
+        'labels' => [
+            'name' => 'Емейл',
+            'singular_name' => 'us_email',
+        ],
+        'public' => false,
+        'show_ui' => true,
+    ]);
+});
+add_action('init', function (){
     register_post_type('gallery_grid', [
         'labels' => [
             'name' => 'Галерея Grid',
@@ -55,6 +75,36 @@ add_action('init', function (){
         'labels' => [
             'name' => 'Галерея №2',
             'singular_name' => 'us_gallery_owl',
+        ],
+        'public' => false,
+        'show_ui' => true,
+    ]);
+});
+add_action('init', function (){
+    register_post_type('us_faq', [
+        'labels' => [
+            'name' => 'FAQ',
+            'singular_name' => 'us_faq',
+        ],
+        'public' => false,
+        'show_ui' => true,
+    ]);
+});
+add_action('init', function (){
+    register_post_type('us_reviews', [
+        'labels' => [
+            'name' => 'Відгуки',
+            'singular_name' => 'us_reviews',
+        ],
+        'public' => false,
+        'show_ui' => true,
+    ]);
+});
+add_action('init', function (){
+    register_post_type('us_social', [
+        'labels' => [
+            'name' => 'Соціальні мережі',
+            'singular_name' => 'us_social',
         ],
         'public' => false,
         'show_ui' => true,

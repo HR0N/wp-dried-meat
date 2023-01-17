@@ -22,15 +22,17 @@ get_header();
 <?php
     $gallery_posts_1 = get_posts(['post_type'=>'gallery_grid', 'order'=>'ASC', 'numberposts'=>4]);
     $site_phone = get_posts(['post_type'=>'us_phone', 'numberposts'=>1])[0]->post_content;
+    $site_address = get_posts(['post_type'=>'us_address', 'numberposts'=>1])[0]->us_address;
+    $site_email = get_posts(['post_type'=>'us_email', 'numberposts'=>1])[0]->us_email;
     $prices = get_posts(['post_type'=>'us_prices', 'order'=>'ASC', 'numberposts'=>20]);
     $about_product = get_posts(['post_type'=>'us_about_product', 'numberposts'=>1])[0];
     $why_are_we = get_posts(['post_type'=>'us_why_are_we', 'numberposts'=>3, 'order'=>'ASC']);
     $gallery_owl = get_posts(['post_type'=>'us_gallery_owl', 'numberposts'=>40, 'order'=>'ASC']);
+    $faq = get_posts(['post_type'=>'us_faq', 'numberposts'=>20, 'order'=>'ASC']);
+    $reviews = get_posts(['post_type'=>'us_reviews', 'numberposts'=>20, 'order'=>'ASC']);
+    $site_social = get_posts(['post_type'=>'us_social', 'numberposts'=>1])[0];
 
 
-    echo '<pre>';
-    echo var_dump($gallery_owl);
-    echo '</pre>';
 
 
 ?>
@@ -67,7 +69,7 @@ get_header();
             </div>
         </div>
 
-        <div class="frame prices">
+        <div class="frame prices" id="prices">
             <div class="prices-wrap">
                 <div class="prices-info">
                     <div class="prices-title">Ціни</div>
@@ -95,7 +97,7 @@ get_header();
             </div>
         </div>
 
-        <div class="frame extra-info">
+        <div class="frame extra-info" id="about_product">
             <div class="extra-info-wrap">
                 <div class="extra-info-col-1">
                     <div class="title"><?php echo $about_product->post_title; ?></div>
@@ -154,11 +156,23 @@ get_header();
             </div>
         </div>
 
-        <div class="frame faq">
+        <div class="frame faq" id="faq">
             <div class="faq-wrap">
                 <div class="faq-title">Поширені запитання</div>
                 <div class="faq-questions">
-                    <div class="faq-question">
+                    <?php foreach ($faq as $key=>$fa): ?>
+                        <div class="faq-question">
+                            <div class="row-1">
+                                <div class="faq-question__num"><?php echo $key < 10 ? '0'.($key+1) : $key+1; ?></div>
+                                <div class="faq-question__title"><?php echo $fa->post_title; ?></div>
+                                <div class="faq-question__arrow-icon"><i class="fa-solid fa-angle-up"></i></div>
+                            </div>
+                            <div class="row-2">
+                                <div class="faq-question__description"><?php echo $fa->post_content; ?></div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                    <!--<div class="faq-question">
                         <div class="row-1">
                             <div class="faq-question__num">01</div>
                             <div class="faq-question__title">Як довго триває редагування?</div>
@@ -201,7 +215,7 @@ get_header();
                             <div class="faq-question__description">Все залежить від кількості знятого матеріалу та
                                 кількості фотографій, що пройшли ретуш.</div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
                 <div class="faq-card">
                     <div class="logo"><img src="<?php echo get_template_directory_uri().'/media/images/IMG_3472.jpg'?>" alt="alt_img"></div>
@@ -212,11 +226,26 @@ get_header();
             </div>
         </div>
 
-        <div class="frame reviews">
+        <div class="frame reviews" id="reviews">
             <div class="review-wrap">
                 <div class="owl-carousel owl-carousel-reviews owl-theme">
-                    <div><div class="item">
-                            <div class="photo"><img src="<?php echo get_template_directory_uri().'/media/reviews-photo/1.jpg'?>" alt="alt_img"></div>
+                    <?php foreach ($reviews as $rev): ?>
+                        <div><div class="item">
+                                <div class="photo"><img src="<?php echo get_field('photo', $rev->ID)['url']; ?>" alt="alt_img"></div>
+                                <div class="name"><?php echo get_field('name', $rev->ID); ?></div>
+                                <div class="service"><?php echo $rev->post_title; ?></div>
+                                <div class="review">
+                                    <div class="quote">„</div>
+                                    <div class="text">
+                                        <?php echo $rev->post_content; ?>
+                                    </div>
+                                    <div class="quote">“</div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                    <!--<div><div class="item">
+                            <div class="photo"><img src="<?php /*echo get_template_directory_uri().'/media/reviews-photo/1.jpg'*/?>" alt="alt_img"></div>
                             <div class="name">Маргарита</div>
                             <div class="service">Корисні джерки</div>
                             <div class="review">
@@ -231,7 +260,7 @@ get_header();
                         </div>
                     </div>
                     <div><div class="item">
-                            <div class="photo"><img src="<?php echo get_template_directory_uri().'/media/reviews-photo/2.jpg'?>" alt="alt_img"></div>
+                            <div class="photo"><img src="<?php /*echo get_template_directory_uri().'/media/reviews-photo/2.jpg'*/?>" alt="alt_img"></div>
                             <div class="name">Елена</div>
                             <div class="service">Смачні джерки</div>
                             <div class="review">
@@ -246,7 +275,7 @@ get_header();
                         </div>
                     </div>
                     <div><div class="item">
-                            <div class="photo"><img src="<?php echo get_template_directory_uri().'/media/reviews-photo/3.jpg'?>" alt="alt_img"></div>
+                            <div class="photo"><img src="<?php /*echo get_template_directory_uri().'/media/reviews-photo/3.jpg'*/?>" alt="alt_img"></div>
                             <div class="name">Свiтлана</div>
                             <div class="service">Смачні джерки</div>
                             <div class="review">
@@ -257,7 +286,7 @@ get_header();
                                 <div class="quote">“</div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>

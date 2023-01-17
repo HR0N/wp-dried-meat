@@ -13,6 +13,14 @@
                 this.events();
             }
 
+            on_load(){  /*  smooth scrolling to anchors   */
+                $('.nav-link').on('click', function(e){
+                    let link = $(e.target).attr('href');
+                    $('html,body').stop().animate({ scrollTop: $(link).offset().top }, 600);
+                    e.preventDefault();
+                });
+            }
+
             show_menu(){
                 $(this.menu).addClass('show-menu');
                 this.back_drop_modal.fadeIn(200);
@@ -27,6 +35,7 @@
             }
 
             events(){
+                this.on_load();
                 this.menu_button_show.on('click', this.show_menu.bind(this));
                 this.menu_button_hide.on('click', this.hide_menu.bind(this));
             };
