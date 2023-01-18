@@ -49,7 +49,7 @@ get_header();
             </div>
             <div class="col-right">
                 <div class="phone"><?php echo $site_phone;?></div>
-                <div class="button"><button class="custom-button-1">Замовити дзвінок</button></div>
+                <div class="button"><button class="custom-button-1 request">Замовити дзвінок</button></div>
             </div>
         </div>
 
@@ -90,7 +90,7 @@ get_header();
                                 <div class="option-2-title">Кіл-ть</div>
                                 <?php echo get_field('count', $price->ID) ?>
                             </div>
-                            <div class="button"><button class="custom-button-1">Залишити заявку</button></div>
+                            <div class="button"><button class="custom-button-1 application">Залишити заявку</button></div>
                         </div>
                     <?php endforeach;?>
                 </div>
@@ -231,7 +231,7 @@ get_header();
                     <div class="logo"><img src="<?php echo get_template_directory_uri().'/media/images/IMG_3472.jpg'?>" alt="alt_img"></div>
                     <div class="description">Запитати</div>
                     <div class="title">В'ялині джерки</div>
-                    <div class="button"><button class="custom-button-1">Своє питання</button></div>
+                    <div class="button"><button class="custom-button-1 question">Своє питання</button></div>
                 </div>
             </div>
         </div>
@@ -303,6 +303,77 @@ get_header();
             </div>
         </div>
         <?php endif; ?>
+
+
+        <div class="back-drop-modal-2">
+            <div class="callback-wrap">
+
+                <div class="callback-form request">
+                    <div class="pack">
+                        <div class="close"><i class="fa-solid fa-xmark"></i></div>
+                        <div class="image"><img src="<?php echo get_template_directory_uri().'/media/images/IMG_3418.jpg'?>" alt="logo_alt"></div>
+                        <div class="content">
+                            <div class="title">Замовити дзвінок</div>
+                            <div class="description">Введіть дані для замовлення зворотного дзвінка</div>
+                            <div class="form">
+                                <label>Ім'я
+                                    <input class="form-control" type="text" name="name">
+                                </label>
+                                <label><span>* </span>Телефон
+                                    <input required class="form-control" type="tel" name="phone">
+                                </label>
+                            </div>
+                            <div class="buttons"><button class="send-request custom-button-1">Надіслати</button></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="callback-form application">
+                    <div class="pack">
+                        <div class="close"><i class="fa-solid fa-xmark"></i></div>
+                        <div class="image"><img src="<?php echo get_template_directory_uri().'/media/images/IMG_3419.jpg'?>" alt="logo_alt"></div>
+                        <div class="content">
+                            <div class="title">Замовити послугу</div>
+                            <div class="description">Введіть дані для замовлення зворотного дзвінка</div>
+                            <div class="form">
+                                <label>Ім'я
+                                    <input class="form-control" type="text" name="name">
+                                </label>
+                                <label><span>* </span>Телефон
+                                    <input required class="form-control" type="tel" name="phone">
+                                </label>
+                            </div>
+                            <div class="buttons"><button class="send-request custom-button-1">Надіслати</button></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="callback-form question">
+                    <div class="pack">
+                        <div class="close"><i class="fa-solid fa-xmark"></i></div>
+                        <div class="image"><img src="<?php echo get_template_directory_uri().'/media/images/IMG_3456.jpg'?>" alt="logo_alt"></div>
+                        <div class="content">
+                            <div class="title">Консультація</div>
+                            <div class="description">Введіть дані для замовлення зворотного дзвінка</div>
+                            <div class="form">
+                                <label>Ім'я
+                                    <input class="form-control" type="text" name="name">
+                                </label>
+                                <label><span>* </span>Телефон
+                                    <input required class="form-control" type="tel" name="phone">
+                                </label>
+                                <label>Коментар
+                                    <textarea class="form-control" name="comment" ></textarea>
+                                </label>
+                            </div>
+                            <div class="buttons"><button class="send-request custom-button-1">Надіслати</button></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
 
     </main><!-- #main -->
 

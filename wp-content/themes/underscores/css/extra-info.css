@@ -63,7 +63,18 @@
     font-family: Roboto, sans-serif;
 }
 
-
+@media screen and (max-width: 321px) {
+    .extra-info, .extra-info-col-2{
+        max-width: 320px;
+    }
+    .extra-info-col-2 .photo{
+        max-width: 100%;
+    }
+    .extra-info-col-2 .photo img{
+        width: 100%;
+        margin: 0;
+    }
+}
 @media screen and (max-width: 768px) {
     .extra-info-wrap{
         justify-content: center;

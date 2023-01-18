@@ -13,6 +13,8 @@
 
     <?php
 
+    include_once('tgbot/bot.php');
+
     $site_phone = isset(get_posts(['post_type'=>'us_phone', 'numberposts'=>1])[0]) ? get_posts(['post_type'=>'us_phone', 'numberposts'=>1])[0]->post_content : '';
     $site_address = isset(get_posts(['post_type'=>'us_address', 'numberposts'=>1])[0]) ? get_posts(['post_type'=>'us_address', 'numberposts'=>1])[0]->post_content : '';
     $site_email = isset(get_posts(['post_type'=>'us_email', 'numberposts'=>1])[0]) ? get_posts(['post_type'=>'us_email', 'numberposts'=>1])[0]->post_content : '';

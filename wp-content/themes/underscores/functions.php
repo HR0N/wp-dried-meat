@@ -160,6 +160,7 @@ function underscores_scripts() {
     wp_enqueue_style( 'faq', get_template_directory_uri().'/css/faq.css');
     wp_enqueue_style( 'reviews', get_template_directory_uri().'/css/reviews.css');
     wp_enqueue_style( 'footer', get_template_directory_uri().'/css/footer.css');
+    wp_enqueue_style( 'call_request_forms', get_template_directory_uri().'/css/call_request_forms.css');
     /*  Owl Carousel    */
     wp_enqueue_style( 'owl', get_template_directory_uri().'/libs/OwlCarousel2-2.3.4/assets/owl.carousel.css');
     wp_enqueue_style( 'owl-theme', get_template_directory_uri().'/libs/OwlCarousel2-2.3.4/assets/owl.theme.default.css');
@@ -182,6 +183,7 @@ function init_classes(){
     wp_enqueue_script( 'owl', get_template_directory_uri() . '/js/owl.js');
     wp_enqueue_script( 'faq', get_template_directory_uri() . '/js/faq.js');
     wp_enqueue_script( 'reviews', get_template_directory_uri() . '/js/reviews.js');
+    wp_enqueue_script( 'tg-bot', get_template_directory_uri() . '/js/call_request_forms.js');
 }
 add_action("wp_footer", 'init_classes');
 /**
