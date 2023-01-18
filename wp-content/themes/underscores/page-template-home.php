@@ -20,17 +20,17 @@
 get_header();
 ?>
 <?php
-    $gallery_posts_1 = get_posts(['post_type'=>'gallery_grid', 'order'=>'ASC', 'numberposts'=>4]);
-    $site_phone = get_posts(['post_type'=>'us_phone', 'numberposts'=>1])[0]->post_content;
-    $site_address = get_posts(['post_type'=>'us_address', 'numberposts'=>1])[0]->us_address;
-    $site_email = get_posts(['post_type'=>'us_email', 'numberposts'=>1])[0]->us_email;
-    $prices = get_posts(['post_type'=>'us_prices', 'order'=>'ASC', 'numberposts'=>20]);
-    $about_product = get_posts(['post_type'=>'us_about_product', 'numberposts'=>1])[0];
-    $why_are_we = get_posts(['post_type'=>'us_why_are_we', 'numberposts'=>3, 'order'=>'ASC']);
+    $gallery_posts_1 = isset(get_posts(['post_type'=>'gallery_grid', 'order'=>'ASC', 'numberposts'=>4])[0]) ? get_posts(['post_type'=>'gallery_grid', 'order'=>'ASC', 'numberposts'=>4]) : '';
+    $site_phone = isset(get_posts(['post_type'=>'us_phone', 'numberposts'=>1])[0]) ? get_posts(['post_type'=>'us_phone', 'numberposts'=>1])[0]->post_content : '';
+    $site_address = isset(get_posts(['post_type'=>'us_address', 'numberposts'=>1])[0]) ? get_posts(['post_type'=>'us_address', 'numberposts'=>1])[0]->us_address : '';
+    $site_email = isset(get_posts(['post_type'=>'us_email', 'numberposts'=>1])[0]) ? get_posts(['post_type'=>'us_email', 'numberposts'=>1])[0]->us_email : '';
+    $prices = isset(get_posts(['post_type'=>'us_prices', 'order'=>'ASC', 'numberposts'=>20])[0]) ? get_posts(['post_type'=>'us_prices', 'order'=>'ASC', 'numberposts'=>20]) : '';
+    $about_product = isset(get_posts(['post_type'=>'us_about_product', 'numberposts'=>1])[0]) ? get_posts(['post_type'=>'us_about_product', 'numberposts'=>1])[0] : '';
+    $why_are_we = isset(get_posts(['post_type'=>'us_why_are_we', 'numberposts'=>3, 'order'=>'ASC'])[0]) ? get_posts(['post_type'=>'us_why_are_we', 'numberposts'=>3, 'order'=>'ASC']) : '';
     $gallery_owl = get_posts(['post_type'=>'us_gallery_owl', 'numberposts'=>40, 'order'=>'ASC']);
-    $faq = get_posts(['post_type'=>'us_faq', 'numberposts'=>20, 'order'=>'ASC']);
-    $reviews = get_posts(['post_type'=>'us_reviews', 'numberposts'=>20, 'order'=>'ASC']);
-    $site_social = get_posts(['post_type'=>'us_social', 'numberposts'=>1])[0];
+    $faq = isset(get_posts(['post_type'=>'us_faq', 'numberposts'=>20, 'order'=>'ASC'])[0]) ? get_posts(['post_type'=>'us_faq', 'numberposts'=>20, 'order'=>'ASC']) : '';
+    $reviews = isset(get_posts(['post_type'=>'us_reviews', 'numberposts'=>20, 'order'=>'ASC'])[0]) ? get_posts(['post_type'=>'us_reviews', 'numberposts'=>20, 'order'=>'ASC']) : '';
+    $site_social = isset(get_posts(['post_type'=>'us_social', 'numberposts'=>1])[0]) ? get_posts(['post_type'=>'us_social', 'numberposts'=>1])[0] : '';
 
 
 
@@ -58,17 +58,17 @@ get_header();
         <div class="frame gallery-grid">
             <div class="grid-wrap">
                 <?php
-
+                if(isset($gallery_posts_1)):
                 foreach ($gallery_posts_1 as $g_post_1):?>
                 <div class="grid-item grid-item-1"><?= $g_post_1->post_content; ?></div>
 <!--                <div class="grid-item grid-item-1"><img src="--><?php //echo get_template_directory_uri().'/media/images/IMG_3418.jpg'?><!--" alt="alt_img"></div>-->
 <!--                <div class="grid-item grid-item-2"><img src="--><?php //echo get_template_directory_uri().'/media/images/IMG_3426.jpg'?><!--" alt="alt_img"></div>-->
 <!--                <div class="grid-item grid-item-3"><img src="--><?php //echo get_template_directory_uri().'/media/images/IMG_3472.jpg'?><!--" alt="alt_img"></div>-->
 <!--                <div class="grid-item grid-item-4"><img src="--><?php //echo get_template_directory_uri().'/media/images/IMG_3422.jpg'?><!--" alt="alt_img"></div>-->
-                <?php endforeach; ?>
+                <?php endforeach; endif; ?>
             </div>
         </div>
-
+        <?php if(isset($prices)): ?>
         <div class="frame prices" id="prices">
             <div class="prices-wrap">
                 <div class="prices-info">
@@ -92,11 +92,13 @@ get_header();
                             </div>
                             <div class="button"><button class="custom-button-1">Залишити заявку</button></div>
                         </div>
-                    <?php endforeach; ?>
+                    <?php endforeach;?>
                 </div>
             </div>
         </div>
+        <?php endif; ?>
 
+        <?php if(isset($about_product)): ?>
         <div class="frame extra-info" id="about_product">
             <div class="extra-info-wrap">
                 <div class="extra-info-col-1">
@@ -114,7 +116,9 @@ get_header();
                 </div>
             </div>
         </div>
+        <?php endif; ?>
 
+        <?php if(isset($why_are_we)): ?>
         <div class="frame why_are_we">
             <div class="why_are_we-wrap">
                 <div class="title">Чому ми?</div>
@@ -131,7 +135,10 @@ get_header();
                 </div>
             </div>
         </div>
+        <?php endif; ?>
 
+
+        <?php if(isset($gallery_owl)): ?>
         <div class="frame gallery-owl">
             <div class="owl-carousel owl-carousel-gallery-1 owl-theme">
                 <?php foreach ($gallery_owl as $owl): ?>
@@ -141,6 +148,7 @@ get_header();
                 <?php endforeach; ?>
             </div>
         </div>
+        <?php endif; ?>
 
         <div class="frame gallery-show">
             <div class="photo-count">0 / 0</div>
@@ -156,6 +164,8 @@ get_header();
             </div>
         </div>
 
+
+        <?php if(isset($faq)): ?>
         <div class="frame faq" id="faq">
             <div class="faq-wrap">
                 <div class="faq-title">Поширені запитання</div>
@@ -225,7 +235,9 @@ get_header();
                 </div>
             </div>
         </div>
+        <?php endif; ?>
 
+        <?php if(isset($reviews)): ?>
         <div class="frame reviews" id="reviews">
             <div class="review-wrap">
                 <div class="owl-carousel owl-carousel-reviews owl-theme">
@@ -290,6 +302,7 @@ get_header();
                 </div>
             </div>
         </div>
+        <?php endif; ?>
 
     </main><!-- #main -->
 
