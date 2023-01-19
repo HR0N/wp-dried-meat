@@ -13,7 +13,7 @@ body, html{
 :root{
     --header-link: rgba(255,255,255,0.7);
     --about: rgba(255,255,255,0.7);
-    --black: #101112;
+    --black: rgb(16,17,18);
     --black-v2: black;
     --brown: rgba(192,154,100,1);
 

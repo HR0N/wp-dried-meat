@@ -1,8 +1,10 @@
 class Darth_Vader {
     constructor($, elem) {
         this.el = $(elem);
+        this.$ = $;
         this.page = $('html, body');
         this.scroll = true;
+        this.ajax = new Ajax(this.$);
     }
 
     startScroll(){

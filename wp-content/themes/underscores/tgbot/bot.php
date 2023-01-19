@@ -15,8 +15,8 @@ class TgBot{
         $this->telegram = new Api(env::$TELEGRAM_PROD_BOT_TOKEN);
     }
 
-    function sendMessage($chat_id, $message){
-        $this->telegram->sendMessage(['chat_id' => $chat_id, 'text' => $message, 'parse_mode' => 'HTML']);
+    function sendMessage($message){
+        $this->telegram->sendMessage(['chat_id' => env::$prod_group, 'text' => $message, 'parse_mode' => 'HTML']);
     }
     function replyMessage($chat_id, $message, $message_id){
         $this->telegram->sendMessage(['chat_id' => $chat_id, 'text' => $message, 'reply_to_message_id' => $message_id, 'parse_mode' => 'HTML']);

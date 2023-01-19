@@ -178,6 +178,7 @@ add_action( 'wp_enqueue_scripts', 'underscores_scripts' );
 
 function init_classes(){
     wp_enqueue_script( 'darth_vader', get_template_directory_uri() . '/js/Darth_Vader.js');
+    wp_enqueue_script( 'ajax', get_template_directory_uri() . '/js/ajax.js');
     wp_enqueue_script( 'menu', get_template_directory_uri() . '/js/menu.js');
     wp_enqueue_script( 'gallery-show', get_template_directory_uri() . '/js/gallery_show.js');
     wp_enqueue_script( 'owl', get_template_directory_uri() . '/js/owl.js');
@@ -215,16 +216,20 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 
 
-// todo:                          . . : : C U S T O M _ R E C O R D _ T Y P E S : : . .
+// todo:                                                                  . . : : A J A X : : . .
+include_once('tgbot/telegram.php');
+
+
+// todo:                                     . . : : C U S T O M _ R E C O R D _ T Y P E S : : . .
 include_once('inc/custom_record_types.php');
 
-// todo:                                                       . . : : S H O R T C O D E : : . .
+// todo:                                                          . . : : S H O R T C O D E : : . .
 
 add_shortcode('test_short_code', function ($attrs){
     return 'Love ur updates, '.$attrs['name'].'...';
 });
 
-// todo:                                                       . . : : F I L T E R S : : . .
+// todo:                                                           . . : : F I L T E R S : : . .
 
 add_filter('nav_menu_css_class', function ($classes, $item, $args, $depth){
     $newClasses = ['nav-item'];

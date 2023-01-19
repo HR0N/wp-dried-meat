@@ -343,7 +343,7 @@ get_header();
                                     <input required class="form-control" type="tel" name="phone">
                                 </label>
                             </div>
-                            <div class="buttons"><button class="send-request custom-button-1">Надіслати</button></div>
+                            <div class="buttons"><button class="send-application custom-button-1">Надіслати</button></div>
                         </div>
                     </div>
                 </div>
@@ -366,13 +366,18 @@ get_header();
                                     <textarea class="form-control" name="comment" ></textarea>
                                 </label>
                             </div>
-                            <div class="buttons"><button class="send-request custom-button-1">Надіслати</button></div>
+                            <div class="buttons"><button class="send-question custom-button-1">Надіслати</button></div>
                         </div>
                     </div>
                 </div>
 
             </div>
-
+            <div class="thank-you">
+                <div class="pack">
+                    <div class="image"><img src="<?php echo get_template_directory_uri().'/media/images/IMG_3456.jpg'?>" alt="logo_alt"></div>
+                    <div class="text">Дякуємо, ми з вами зв'яжемося!</div>
+                </div>
+            </div>
         </div>
 
     </main><!-- #main -->
