@@ -150,8 +150,9 @@ function underscores_scripts() {
     wp_enqueue_style( 'main', get_template_directory_uri().'/css/main.css');
     wp_enqueue_style( 'home', get_template_directory_uri().'/css/home.css');
     wp_enqueue_style( 'call-request', get_template_directory_uri().'/css/call-request.css');
-    wp_enqueue_style( 'gallery-grid', get_template_directory_uri().'/css/gallery-grid.css');
-    wp_enqueue_style( 'prices', get_template_directory_uri().'/css/prices.css');
+//    wp_enqueue_style( 'gallery-grid', get_template_directory_uri().'/css/gallery-grid.css');
+//    wp_enqueue_style( 'prices', get_template_directory_uri().'/css/prices.css');
+    wp_enqueue_style( 'prices-v2', get_template_directory_uri().'/css/prices_v2.css');
     wp_enqueue_style( 'extra-info', get_template_directory_uri().'/css/extra-info.css');
     wp_enqueue_style( 'why_are_we', get_template_directory_uri().'/css/why_are_we.css');
     wp_enqueue_style( 'settings', get_template_directory_uri().'/css/settings.css');
@@ -182,6 +183,7 @@ function init_classes(){
     wp_enqueue_script( 'menu', get_template_directory_uri() . '/js/menu.js');
     wp_enqueue_script( 'gallery-show', get_template_directory_uri() . '/js/gallery_show.js');
     wp_enqueue_script( 'owl', get_template_directory_uri() . '/js/owl.js');
+    wp_enqueue_script( 'prices_v2_owl_gallery', get_template_directory_uri() . '/js/prices_v2_owl_gallery.js');
     wp_enqueue_script( 'faq', get_template_directory_uri() . '/js/faq.js');
     wp_enqueue_script( 'reviews', get_template_directory_uri() . '/js/reviews.js');
     wp_enqueue_script( 'tg-bot', get_template_directory_uri() . '/js/call_request_forms.js');

@@ -1,0 +1,84 @@
+.prices_v2{
+    margin-top: 150px;
+}
+.prices-items{
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 500px));
+    column-gap: 20px;
+    row-gap: 50px;
+}
+
+.prices-items .prices-item{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 100%);
+    grid-template-rows: repeat(2, auto);
+    position: relative;
+    font-size: 22px;
+    font-family: "Roboto Condensed", sans-serif;
+}
+.prices-items .prices-item .owl-nav, .prices-items .prices-item .owl-dots{
+    display: none;
+}
+
+.prices-items .prices-item .image{
+}
+
+.prices-items .prices-item .image img{
+    width: 100%;
+    border-radius: .2rem;
+}
+
+.prices-items .prices-item .info{
+    padding: 0 10px;
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    align-self: flex-end;
+    font-family: Roboto, sans-serif;
+}
+.prices-items .prices-item .title{
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: white;
+    margin-top: 10px;
+}
+
+.prices-items .prices-item .price{
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.3em;
+    color: var(--brown);
+    /*margin-top: 10px;*/
+}
+
+.prices-items .prices-item .pack{
+    width: 100%;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, auto);
+    /*margin-top: 10px;*/
+    border-top: 1px solid #272727;
+    margin-top: 5px;
+    padding-top: 10px;
+}
+
+.prices-items .prices-item .weight{
+    color: whitesmoke;
+}
+
+.prices-items .prices-item .weight .weight-title{
+    color: var(--about);
+    line-height: .8em;
+    font-size: .8em;
+}
+
+.prices-items .prices-item .count{
+    color: whitesmoke;
+}
+
+.prices-items .prices-item .count .count-title{
+    color: var(--about);
+    line-height: .8em;
+    font-size: .8em;
+}

@@ -30,7 +30,7 @@ add_action('init', function (){
         'show_ui' => true,
     ]);
 });
-add_action('init', function (){
+/*add_action('init', function (){
     register_post_type('gallery_grid', [
         'labels' => [
             'name' => 'Галерея Grid',
@@ -39,12 +39,22 @@ add_action('init', function (){
         'public' => false,
         'show_ui' => true,
     ]);
-});
-add_action('init', function (){
+});*/
+/*add_action('init', function (){
     register_post_type('us_prices', [
         'labels' => [
             'name' => 'Розділ \'Ціни\'',
             'singular_name' => 'us_prices',
+        ],
+        'public' => false,
+        'show_ui' => true,
+    ]);
+});*/
+add_action('init', function (){
+    register_post_type('us_prices_v2', [
+        'labels' => [
+            'name' => 'Розділ \'Ціни\'',
+            'singular_name' => 'us_prices_v2',
         ],
         'public' => false,
         'show_ui' => true,
