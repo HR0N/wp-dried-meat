@@ -29,9 +29,11 @@ function us_ajax_telegram_request(){
 function us_ajax_telegram_application(){
     global $bot;
     $response = json_encode($_POST['data']);
-    $name = json_decode($response)->name;
-    $phone = json_decode($response)->phone;
-    $message = "<b>Замовлення послуги</b>\n\n📋 Ім'я: $name\n☎️ Телефон: $phone";
+    $first_name = json_decode($response)->us_name;
+    $second_name = json_decode($response)->us_s_name;
+    $post_address = json_decode($response)->us_post;
+    $phone = json_decode($response)->us_phone;
+    $message = "<b>Замовлення</b>\n\n📋 Ім'я: $second_name, $first_name\n🏘️️ Адреса: $post_address\n☎️ Телефон: $phone";
 
 //    echo json_encode($message);
     $bot->sendMessage($message);

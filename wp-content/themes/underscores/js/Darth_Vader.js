@@ -7,6 +7,25 @@ class Darth_Vader {
         this.ajax = new Ajax(this.$);
     }
 
+
+    fetch_field(data, field){
+        field && field.map((k, v)=>{
+            data[this.$(v).attr('name')] = this.$(v).val();
+        });
+    }
+    serialize_form(form){
+        let data = {};
+        let input = this.$(form).find('input');
+        let textarea = this.$(form).find('textarea');
+        let select = this.$(form).find('select');
+
+        this.fetch_field(data, input);
+        this.fetch_field(data, textarea);
+        this.fetch_field(data, select);
+
+        return data;
+    }
+
     startScroll(){
         this.page.css({'overflow-y': 'visible', 'padding-right': '0'});
     }

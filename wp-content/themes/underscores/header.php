@@ -20,7 +20,7 @@
     <!--    Google Fonts    -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Condensed&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 
     <!--    Font Awesome    -->
     <script src="https://kit.fontawesome.com/ee97ebf0ee.js" crossorigin="anonymous"></script>
@@ -56,12 +56,16 @@
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'underscores' ); ?></button>
 			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
+            if(is_page('thank-you-page')){
+
+            }else{
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'menu-1',
+                        'menu_id'        => 'primary-menu',
+                    )
+                );
+            };
 			?>
             <div class="show-menu-btn"><i class="fa-solid fa-bars"></i></div>
             <div class="hide-menu-btn"><i class="fa-solid fa-xmark"></i></div>

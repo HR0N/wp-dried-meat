@@ -112,6 +112,9 @@
     color: grey;
     font-family: Roboto, sans-serif;
 }
+.callback-form .pack .form label.order{
+    display: none;
+}
 .callback-form .pack .form span{
     color: red;
 }

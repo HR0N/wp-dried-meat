@@ -155,6 +155,7 @@ function underscores_scripts() {
     wp_enqueue_style( 'prices-v2', get_template_directory_uri().'/css/prices_v2.css');
     wp_enqueue_style( 'extra-info', get_template_directory_uri().'/css/extra-info.css');
     wp_enqueue_style( 'why_are_we', get_template_directory_uri().'/css/why_are_we.css');
+    wp_enqueue_style( 'thank_you_page', get_template_directory_uri().'/css/thank_you_page.css');
     wp_enqueue_style( 'settings', get_template_directory_uri().'/css/settings.css');
     wp_enqueue_style( 'gallery-owl', get_template_directory_uri().'/css/gallery-owl.css');
     wp_enqueue_style( 'gallery-show', get_template_directory_uri().'/css/gallery-show.css');

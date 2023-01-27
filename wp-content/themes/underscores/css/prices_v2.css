@@ -82,3 +82,16 @@
     line-height: .8em;
     font-size: .8em;
 }
+.prices-items .prices-item .button{
+    margin-top: 20px;
+}
+.prices-items .prices-item .button button{
+    width: 100%;
+}
+@media screen and (min-width: 426px) {
+
+    .prices-items .prices-item .button button{
+        font-size: 1em;
+        line-height: 1em;
+    }
+}

@@ -120,6 +120,8 @@ get_header();
                                     <?php echo get_field('count', $price->ID); ?>
                                 </div>
                             </div>
+                            <div class="post_id" hidden><?php echo $price->ID; ?></div>
+                            <div class="button"><button class="custom-button-1 application">Замовити</button></div>
                         </div>
                     </div>
                     <?php endforeach; ?>
@@ -364,17 +366,26 @@ get_header();
                         <div class="close"><i class="fa-solid fa-xmark"></i></div>
                         <div class="image"><img src="<?php echo get_template_directory_uri().'/media/images/IMG_3419.jpg'?>" alt="logo_alt"></div>
                         <div class="content">
-                            <div class="title">Замовити послугу</div>
+                            <div class="title">Замовити</div>
                             <div class="description">Введіть дані для замовлення зворотного дзвінка</div>
-                            <div class="form">
+                            <form class="form form-application" method="POST" action="thank-you-page">
                                 <label>Ім'я
-                                    <input class="form-control" type="text" name="name">
+                                    <input class="form-control" type="text" name="us_name">
+                                </label>
+                                <label>Прізвище
+                                    <input class="form-control" type="text" name="us_s_name">
+                                </label>
+                                <label>Відділення нової пошти
+                                    <input class="form-control" type="text" name="us_post">
                                 </label>
                                 <label><span>* </span>Телефон
-                                    <input required class="form-control" type="tel" name="phone">
+                                    <input required class="form-control" type="tel" name="us_phone">
                                 </label>
-                            </div>
-                            <div class="buttons"><button class="send-application custom-button-1">Надіслати</button></div>
+                                <label class="order">
+                                    <input class="form-control" type="text" name="us_id">
+                                </label>
+                                <div class="buttons"><button class="send-application custom-button-1" type="submit">Надіслати</button></div>
+                            </form>
                         </div>
                     </div>
                 </div>
