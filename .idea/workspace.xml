@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6dc0c9a2-ee50-40f9-91a9-8e1f06c3b37f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/js/formsFill.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wp-content/themes/underscores/js/localStorage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/underscores/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/underscores/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/underscores/js/Darth_Vader.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/underscores/js/Darth_Vader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/underscores/js/call_request_forms.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/underscores/js/call_request_forms.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/underscores/page-template-home.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/underscores/page-template-home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/underscores/tgbot/bot.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/underscores/tgbot/bot.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/underscores/js/formsFill.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/underscores/js/formsFill.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +81,8 @@
       <workItem from="1674530193662" duration="17000" />
       <workItem from="1674834172355" duration="23265000" />
       <workItem from="1674930905984" duration="541000" />
-      <workItem from="1675106627113" duration="3722000" />
+      <workItem from="1675106627113" duration="3803000" />
+      <workItem from="1675110545546" duration="243000" />
     </task>
     <servers />
   </component>
@@ -99,10 +94,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1674057450965" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1674931448965">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1675110465415">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1674931448965" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1675110465415" />
     <state x="274" y="34" key="SettingsEditor" timestamp="1673993349286">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -73,7 +73,6 @@ class FormsFill extends Darth_Vader{
         phone ? this.ls_data.phone = phone : null;
         comment ? this.ls_data.comment = comment : null;
 
-        console.log(this.ls_data);
         this.ls.set('forms', this.ls_data);
     }
     set_question_data(){
@@ -84,6 +83,8 @@ class FormsFill extends Darth_Vader{
     }
 
     events(){
+        !this.ls.get('forms') ? this.ls.set('forms', this.ls_data) : false;
+
         this.set_request_data();
         this.set_application_data();
         this.set_question_data();
