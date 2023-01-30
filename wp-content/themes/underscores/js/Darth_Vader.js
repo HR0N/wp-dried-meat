@@ -1,4 +1,4 @@
-class Darth_Vader {
+class Darth_Vader{
     constructor($, elem) {
         this.el = $(elem);
         this.$ = $;

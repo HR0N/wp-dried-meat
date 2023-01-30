@@ -24,6 +24,7 @@
 
                 this.thank_you_message = this.find('.thank-you');
 
+                this.formsFill = new FormsFill($, elem);
                 this.events();
             }
             toggle_modal_background(){this.back_drop_modal_2.toggle(); this.toggleScroll();}
@@ -69,9 +70,9 @@
 
             collect_data(form, textarea = false){
                 let data = {};
-                data.name = form.find('input[name="name"]').val();
-                data.phone = form.find('input[name="phone"]').val();
-                if(textarea){data.comment = form.find('textarea[name="comment"]').val()}
+                data.name = form.find('input[name="us_name"]').val();
+                data.phone = form.find('input[name="us_phone"]').val();
+                if(textarea){data.comment = form.find('textarea[name="us_comment"]').val()}
                 return data;
             }
             collect_serialize(array){
@@ -84,6 +85,7 @@
 
             submit_request(){
                 let data = this.collect_data(this.callback_form_request);
+                this.formsFill.store_request_data();
                 this.ajax.post('telegram_request', data);
                 this.show_thank_you_message();
             }
@@ -91,6 +93,7 @@
             submit_application(e){
                 // e.preventDefault();
                 let data = this.serialize_form(e.currentTarget);
+                this.formsFill.store_application_data();
                 this.ajax.post('telegram_application', data);
                 // this.show_thank_you_message();
                 // $(e.currentTarget).submit();
@@ -98,6 +101,7 @@
 
             submit_question(){
                 let data = this.collect_data(this.callback_form_question, true);
+                this.formsFill.store_question_data();
                 this.ajax.post('telegram_question', data);
                 this.show_thank_you_message();
             }

@@ -16,7 +16,7 @@ class TgBot{
     }
 
     function sendMessage($message){
-        $this->telegram->sendMessage(['chat_id' => env::$dev_group, 'text' => $message, 'parse_mode' => 'HTML']);
+        $this->telegram->sendMessage(['chat_id' => env::$prod_group, 'text' => $message, 'parse_mode' => 'HTML']);
     }
     function replyMessage($chat_id, $message, $message_id){
         $this->telegram->sendMessage(['chat_id' => $chat_id, 'text' => $message, 'reply_to_message_id' => $message_id, 'parse_mode' => 'HTML']);

@@ -350,10 +350,10 @@ get_header();
                             <div class="description">Введіть дані для замовлення зворотного дзвінка</div>
                             <div class="form">
                                 <label>Ім'я
-                                    <input class="form-control" type="text" name="name">
+                                    <input class="form-control" type="text" name="us_name">
                                 </label>
                                 <label><span>* </span>Телефон
-                                    <input required class="form-control" type="tel" name="phone">
+                                    <input required class="form-control" type="tel" name="us_phone">
                                 </label>
                             </div>
                             <div class="buttons"><button class="send-request custom-button-1">Надіслати</button></div>
@@ -399,13 +399,13 @@ get_header();
                             <div class="description">Введіть дані для замовлення зворотного дзвінка</div>
                             <div class="form">
                                 <label>Ім'я
-                                    <input class="form-control" type="text" name="name">
+                                    <input class="form-control" type="text" name="us_name">
                                 </label>
                                 <label><span>* </span>Телефон
-                                    <input required class="form-control" type="tel" name="phone">
+                                    <input required class="form-control" type="tel" name="us_phone">
                                 </label>
                                 <label>Коментар
-                                    <textarea class="form-control" name="comment" ></textarea>
+                                    <textarea class="form-control" name="us_comment"></textarea>
                                 </label>
                             </div>
                             <div class="buttons"><button class="send-question custom-button-1">Надіслати</button></div>

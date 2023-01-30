@@ -188,6 +188,8 @@ function init_classes(){
     wp_enqueue_script( 'faq', get_template_directory_uri() . '/js/faq.js');
     wp_enqueue_script( 'reviews', get_template_directory_uri() . '/js/reviews.js');
     wp_enqueue_script( 'tg-bot', get_template_directory_uri() . '/js/call_request_forms.js');
+    wp_enqueue_script( 'localStorage', get_template_directory_uri() . '/js/localStorage.js');
+    wp_enqueue_script( 'formsFill', get_template_directory_uri() . '/js/formsFill.js');
 }
 add_action("wp_footer", 'init_classes');
 /**
